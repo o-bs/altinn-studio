@@ -1,5 +1,5 @@
 import React from 'react';
-import AltinnButton from 'app-shared/components/AltinnButton';
+import AltinnButton from 'altinn-shared/components/AltinnButton';
 import type { IAltinnWindow } from '../../types/global';
 
 interface IRedirectComponentProvidedProps {

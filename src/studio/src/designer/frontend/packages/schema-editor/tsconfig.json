@@ -22,8 +22,8 @@
     "sourceMap": true,
     "rootDir": "../..",
     "paths": {
-      "app-shared/*": [
-        "../../shared/*"
+      "altinn-shared/*": [
+        "..altinn-shared/*"
       ],
     },
   },

@@ -1,6 +1,6 @@
-import { SagaIterator } from 'redux-saga';
+import type { SagaIterator } from 'redux-saga';
 import { call, fork, put, race, select, take, delay } from 'redux-saga/effects';
-import { get } from 'app-shared/utils/networking';
+import { get } from 'altinn-shared/utils/networking';
 import {
   getDeploymentsFulfilled,
   getDeploymentsRejected,
@@ -12,8 +12,7 @@ import type { RootState } from 'store';
 
 const SelectEnvironments = (store: RootState) =>
   store.configuration.environments.result;
-const OrgsSelector = (store: RootState) =>
-  store.configuration.orgs.allOrgs;
+const OrgsSelector = (store: RootState) => store.configuration.orgs.allOrgs;
 
 function* getDeploymentsIntervalSaga(): SagaIterator {
   while (true) {

@@ -1,35 +1,15 @@
-const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const path = require('path');
+const webpackRoot = require('../webpack.frontend');
 
 module.exports = {
-  entry: './index.tsx',
+  ...webpackRoot,
   output: {
+    path: path.resolve(__dirname, '../dist/ux-editor'),
     filename: 'ui-editor.js',
   },
-  resolve: {
-    extensions: ['.ts', '.tsx', '.js', '.jsx', '.css', '.scss'],
-    alias: {
-      'app-shared': path.resolve(__dirname, '../shared/'),
-    },
-  },
-  module: {
-    rules: [
-      {
-        test: /\.jsx?/,
-        exclude: /node_modules/,
-        use: {
-          loader: 'babel-loader',
-        },
-      },
-      {
-        test: /\.scss$/,
-        use: ['style-loader', 'css-loader'],
-      },
-    ],
-  },
   plugins: [
-    new ForkTsCheckerWebpackPlugin(),
+    ...webpackRoot.plugins,
     new MiniCssExtractPlugin({
       filename: 'ui-editor.css',
     }),

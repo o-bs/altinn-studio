@@ -1,6 +1,6 @@
-import { SagaIterator } from 'redux-saga';
+import type { SagaIterator } from 'redux-saga';
 import { delay, call, fork, put, race, take } from 'redux-saga/effects';
-import { get } from 'app-shared/utils/networking';
+import { get } from 'altinn-shared/utils/networking';
 import { appDeploymentsUrl } from '../../../utils/urlHelper';
 import { AppDeploymentActions } from '../appDeploymentSlice';
 

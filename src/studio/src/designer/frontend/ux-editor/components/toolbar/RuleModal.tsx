@@ -1,7 +1,7 @@
 import React from 'react';
 import Modal from 'react-modal';
 import { Typography } from '@material-ui/core';
-import { getLanguageFromKey } from 'app-shared/utils/language';
+import { getLanguageFromKey } from 'altinn-shared/utils/language';
 import { useDispatch, useSelector } from 'react-redux';
 import { RuleComponent } from '../config/RuleComponent';
 import RuleButton from './RuleButton';

@@ -1,18 +1,17 @@
 /* eslint-disable react/no-find-dom-node */
 import React from 'react';
-import {
+import type {
   ConnectDragPreview,
   ConnectDragSource,
   ConnectDropTarget,
-  DragSource,
   DragSourceConnector,
   DragSourceMonitor,
   DragSourceSpec,
-  DropTarget,
   DropTargetConnector,
   DropTargetMonitor,
   DropTargetSpec,
 } from 'react-dnd';
+import { DragSource, DropTarget } from 'react-dnd';
 import ReactDOM from 'react-dom';
 
 export interface IDroppableDraggableComponentProps {

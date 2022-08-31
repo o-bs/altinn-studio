@@ -1,8 +1,17 @@
-import { createTheme, Grid, makeStyles, Popover, Typography } from '@material-ui/core';
+import {
+  createTheme,
+  Grid,
+  makeStyles,
+  Popover,
+  Typography,
+} from '@material-ui/core';
 import React from 'react';
-import AltinnButton from 'app-shared/components/AltinnButton';
-import studioTheme from 'app-shared/theme/altinnStudioTheme';
-import { getLanguageFromKey, getParsedLanguageFromKey } from 'app-shared/utils/language';
+import AltinnButton from 'altinn-shared/components/AltinnButton';
+import studioTheme from 'altinn-shared/theme/altinnStudioTheme';
+import {
+  getLanguageFromKey,
+  getParsedLanguageFromKey,
+} from 'altinn-shared/utils/language';
 
 const theme = createTheme(studioTheme);
 
@@ -75,7 +84,10 @@ function DownloadRepoModal(props: IDownloadRepoModalProps) {
         >
           <Grid item={true} className={classes.itemSeparator}>
             <Typography className={classes.sidebarHeader}>
-              {getLanguageFromKey('administration.download_repo_heading', props.language)}
+              {getLanguageFromKey(
+                'administration.download_repo_heading',
+                props.language,
+              )}
             </Typography>
           </Grid>
           <Grid item={true} className={classes.sectionSeparator}>
@@ -88,12 +100,30 @@ function DownloadRepoModal(props: IDownloadRepoModalProps) {
           </Grid>
           <Grid item={true} className={classes.itemSeparator}>
             <Typography variant='body1' className={classes.blackText}>
-              <a href={`/designer/api/v1/repos/${(window as any).org}/${(window as any).app}/contents.zip`}>{getLanguageFromKey('administration.download_repo_changes', props.language)}</a>
+              <a
+                href={`/designer/api/v1/repos/${(window as any).org}/${
+                  (window as any).app
+                }/contents.zip`}
+              >
+                {getLanguageFromKey(
+                  'administration.download_repo_changes',
+                  props.language,
+                )}
+              </a>
             </Typography>
           </Grid>
           <Grid item={true}>
             <Typography variant='body1' className={classes.blackText}>
-              <a href={`/designer/api/v1/repos/${(window as any).org}/${(window as any).app}/contents.zip?full=true`}>{getLanguageFromKey('administration.download_repo_full', props.language)}</a>
+              <a
+                href={`/designer/api/v1/repos/${(window as any).org}/${
+                  (window as any).app
+                }/contents.zip?full=true`}
+              >
+                {getLanguageFromKey(
+                  'administration.download_repo_full',
+                  props.language,
+                )}
+              </a>
             </Typography>
           </Grid>
           <Grid container={true}>

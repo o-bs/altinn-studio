@@ -1,7 +1,7 @@
 import React from 'react';
 import { Grid } from '@material-ui/core';
 import { AddPropertyButton } from '../AddPropertyButton';
-import { ILanguage, UiSchemaItem } from '../../types';
+import type { ILanguage, UiSchemaItem } from '../../types';
 import { PropertyItem } from '../PropertyItem';
 import {
   addProperty,

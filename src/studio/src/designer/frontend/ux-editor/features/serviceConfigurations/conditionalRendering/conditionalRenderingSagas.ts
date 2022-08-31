@@ -1,6 +1,6 @@
-import { SagaIterator } from 'redux-saga';
+import type { SagaIterator } from 'redux-saga';
 import { put, select, takeLatest } from 'redux-saga/effects';
-import { PayloadAction } from '@reduxjs/toolkit';
+import type { PayloadAction } from '@reduxjs/toolkit';
 import type { IConditionalRenderingState } from '../serviceConfigurationTypes';
 import {
   setConditionalRenderingConnections,

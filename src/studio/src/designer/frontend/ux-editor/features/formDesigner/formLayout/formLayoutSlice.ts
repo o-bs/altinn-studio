@@ -1,4 +1,5 @@
-import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import type { PayloadAction } from '@reduxjs/toolkit';
+import { createSlice } from '@reduxjs/toolkit';
 import { actions, moduleName } from './formLayoutActions';
 import { getLayoutSettingsSchemaUrl } from '../../../utils/urlHelper';
 import { sortArray } from '../../../utils/arrayHelpers/arrayLogic';
@@ -26,7 +27,7 @@ import type {
   IUpdateLayoutOrderAction,
   IUpdateSelectedLayoutAction,
 } from '../formDesignerTypes';
-import type { ILayoutSettings } from 'app-shared/types/global';
+import type { ILayoutSettings } from 'altinn-shared/types/global';
 import type { IFormDesignerLayout } from '../../../types/global';
 
 export interface IFormLayoutState extends IFormDesignerLayout {

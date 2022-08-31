@@ -1,5 +1,5 @@
-import { get, post } from 'app-shared/utils/networking';
-import { SagaIterator } from 'redux-saga';
+import { get, post } from 'altinn-shared/utils/networking';
+import type { SagaIterator } from 'redux-saga';
 import { call, delay, put, takeLatest } from 'redux-saga/effects';
 import {
   giteaSignOutUrl,

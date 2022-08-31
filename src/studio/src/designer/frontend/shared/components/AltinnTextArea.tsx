@@ -1,10 +1,10 @@
+import type { WithStyles } from '@material-ui/core';
 import {
   createTheme,
   createStyles,
   Grid,
   InputLabel,
   withStyles,
-  WithStyles,
 } from '@material-ui/core';
 import React from 'react';
 import altinnTheme from '../theme/altinnStudioTheme';

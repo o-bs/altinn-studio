@@ -1,12 +1,12 @@
 import { Grid, Typography, makeStyles } from '@material-ui/core';
 import React from 'react';
-import AltinnContentLoader from 'app-shared/components/molecules/AltinnContentLoader';
-import AltinnInformationCardForChildren from 'app-shared/components/molecules/AltinnInformationCardForChildren';
-import { getParsedLanguageFromKey } from 'app-shared/utils/language';
-import { ConfigurationActions } from '../../../sharedResources/configuration/configurationSlice';
+import AltinnContentLoader from 'altinn-shared/components/molecules/AltinnContentLoader';
+import AltinnInformationCardForChildren from 'altinn-shared/components/molecules/AltinnInformationCardForChildren';
+import { getParsedLanguageFromKey } from 'altinn-shared/utils/language';
+import { ConfigurationActions } from '../..altinn-sharedResources/configuration/configurationSlice';
 import DeployContainerComponent from '../containers/deployContainer';
 import ReleaseContainer from '../containers/releaseContainer';
-import { fetchDeployPermissions } from '../../../sharedResources/user/userSlice';
+import { fetchDeployPermissions } from '../..altinn-sharedResources/user/userSlice';
 import { useAppSelector, useAppDispatch } from 'common/hooks';
 import type { IAltinnWindow } from '../../../types/global';
 

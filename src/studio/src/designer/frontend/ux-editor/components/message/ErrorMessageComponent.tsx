@@ -1,7 +1,8 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { removeError, IErrorStateError } from '../../features/error/errorSlice';
+import type { IErrorStateError } from '../../features/error/errorSlice';
+import { removeError } from '../../features/error/errorSlice';
 import type { IAppState } from '../../types/global';
 
 import './ErrorMessageComponent.css';

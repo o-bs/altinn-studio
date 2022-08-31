@@ -132,7 +132,12 @@ class MonacoEditorComponent extends React.Component<
           width: this.props.widthPx ? this.props.heightPx : '100%',
         }}
       >
-        <Grid container={true} item={true} alignItems='center' justifyContent='center'>
+        <Grid
+          container={true}
+          item={true}
+          alignItems='center'
+          justifyContent='center'
+        >
           <Grid id='spinnerGridItem' item={true}>
             <CircularProgress className={classes.spinner} />
           </Grid>

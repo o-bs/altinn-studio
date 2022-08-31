@@ -1,7 +1,7 @@
-import { SagaIterator } from 'redux-saga';
+import type { SagaIterator } from 'redux-saga';
 import { call, put, takeLatest } from 'redux-saga/effects';
-import { put as axiosPut } from 'app-shared/utils/networking';
-import { PayloadAction } from '@reduxjs/toolkit';
+import { put as axiosPut } from 'altinn-shared/utils/networking';
+import type { PayloadAction } from '@reduxjs/toolkit';
 import { applicationMetadataUrl } from '../../../utils/urlHelper';
 import { ApplicationMetadataActions } from '../applicationMetadataSlice';
 import type { IPutApplicationMetadata } from '../applicationMetadataSlice';

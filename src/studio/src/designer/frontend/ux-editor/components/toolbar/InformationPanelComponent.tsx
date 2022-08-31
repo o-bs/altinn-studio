@@ -11,7 +11,7 @@ import {
 import classNames from 'classnames';
 import React from 'react';
 import { connect } from 'react-redux';
-import { ComponentTypes } from '..';
+import type { ComponentTypes } from '..';
 import {
   getComponentHelperTextByComponentType,
   getComponentTitleByComponentType,

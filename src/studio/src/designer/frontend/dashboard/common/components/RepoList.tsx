@@ -1,32 +1,30 @@
 import React from 'react';
-import {
-  DataGrid,
+import type {
   GridSortModel,
   GridActionsColDef,
   GridRowParams,
-  GridActionsCellItem,
   GridValueGetterParams,
   GridValueFormatterParams,
   GridRenderCellParams,
   GridColDef,
-  GridOverlay,
 } from '@mui/x-data-grid';
+import { DataGrid, GridActionsCellItem, GridOverlay } from '@mui/x-data-grid';
 import { makeStyles } from '@material-ui/core';
 import { IconButton } from '@mui/material';
 import cn from 'classnames';
 
-import { getLanguageFromKey } from 'app-shared/utils/language';
-import type { IRepository } from 'app-shared/types/global';
+import { getLanguageFromKey } from 'altinn-shared/utils/language';
+import type { IRepository } from 'altinn-shared/types/global';
 
-import { User } from '../../resources/fetchDashboardResources/dashboardSlice';
-import { MakeCopyModal } from 'common/components/MakeCopyModal';
-import { useAppSelector } from 'common/hooks';
+import type { User } from '../../resources/fetchDashboardResources/dashboardSlice';
+import { MakeCopyModal } from '../../common/components/MakeCopyModal';
+import { useAppSelector } from '../../common/hooks';
 import {
   useSetStarredRepoMutation,
   useUnsetStarredRepoMutation,
-} from 'services/userApi';
+} from '../../services/userApi';
 
-import { getRepoEditUrl } from 'common/utils/urlUtils';
+import { getRepoEditUrl } from '../../common/utils/urlUtils';
 
 export interface IRepoListProps {
   isLoading: boolean;
@@ -247,7 +245,7 @@ export const RepoList = ({
             <a
               key={params.row.id}
               href={params.row.html_url}
-              data-testid="gitea-repo-link"
+              data-testid='gitea-repo-link'
               className={cn(classes.actionLink, classes.repoLink)}
             >
               <span>
@@ -258,7 +256,7 @@ export const RepoList = ({
             <a
               key={params.row.id}
               href={editUrl}
-              data-testid="edit-repo-link"
+              data-testid='edit-repo-link'
               className={cn(classes.actionLink, classes.editLink)}
             >
               <span>{getLanguageFromKey('dashboard.edit_app', language)}</span>

@@ -1,5 +1,5 @@
-import { AxiosError } from 'axios';
-import { SagaIterator } from 'redux-saga';
+import type { AxiosError } from 'axios';
+import type { SagaIterator } from 'redux-saga';
 import {
   delay,
   call,
@@ -9,7 +9,7 @@ import {
   take,
   takeLatest,
 } from 'redux-saga/effects';
-import { checkIfAxiosError } from 'app-shared/utils/networking';
+import { checkIfAxiosError } from 'altinn-shared/utils/networking';
 import { get } from '../../../utils/networking';
 import { releasesGetUrl } from '../../../utils/urlHelper';
 import { AppReleaseActions } from '../appReleaseSlice';

@@ -1,9 +1,9 @@
 import { Typography } from '@material-ui/core';
+import type { WithStyles } from '@material-ui/core/styles';
 import {
   createTheme,
   createStyles,
   MuiThemeProvider,
-  WithStyles,
   withStyles,
 } from '@material-ui/core/styles';
 import Table from '@material-ui/core/Table';

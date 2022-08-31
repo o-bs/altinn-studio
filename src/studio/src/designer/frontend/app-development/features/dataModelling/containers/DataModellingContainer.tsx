@@ -1,5 +1,5 @@
 import React from 'react';
-import { DataModelling } from 'app-shared/features';
+import { DataModelling } from 'altinn-shared/features';
 import { makeStyles, createStyles } from '@material-ui/core';
 import { useAppSelector } from 'common/hooks';
 

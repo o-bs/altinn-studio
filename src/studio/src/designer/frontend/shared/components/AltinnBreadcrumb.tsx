@@ -1,5 +1,6 @@
 import { createTheme, Grid, Typography } from '@material-ui/core';
-import { createStyles, withStyles, WithStyles } from '@material-ui/core/styles';
+import type { WithStyles } from '@material-ui/core/styles';
+import { createStyles, withStyles } from '@material-ui/core/styles';
 import classNames from 'classnames';
 import React from 'react';
 import altinnTheme from '../theme/altinnStudioTheme';
@@ -25,7 +26,7 @@ const styles = () =>
       paddingBottom: '2px',
       color: '#000000',
       textDecoration: 'none',
-      borderBottom: '2px solid ' + theme.altinnPalette.primary.blueDark,
+      borderBottom: `2px solid ${theme.altinnPalette.primary.blueDark}`,
       paddingRight: '5px',
       paddingLeft: '5px',
       '&:focus': {

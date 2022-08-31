@@ -1,10 +1,10 @@
 import { Grid, Typography } from '@material-ui/core';
 import React from 'react';
-import AltinnInputField from 'app-shared/components/AltinnInputField';
-import { getLanguageFromKey } from 'app-shared/utils/language';
+import AltinnInputField from 'altinn-shared/components/AltinnInputField';
+import { getLanguageFromKey } from 'altinn-shared/utils/language';
 import { renderSelectTextFromResources } from '../../utils/render';
-import AltinnRadioGroup from 'app-shared/components/AltinnRadioGroup';
-import AltinnRadio from 'app-shared/components/AltinnRadio';
+import AltinnRadioGroup from 'altinn-shared/components/AltinnRadioGroup';
+import AltinnRadio from 'altinn-shared/components/AltinnRadio';
 import type {
   IFormFileUploaderWithTagComponent,
   FormComponentType,

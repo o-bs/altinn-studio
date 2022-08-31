@@ -161,10 +161,7 @@ const FormComponent = (props: IFormElementProps) => {
 
 const makeMapStateToProps = () => {
   const GetLayoutOrderSelector = makeGetLayoutOrderSelector();
-  const mapStateToProps = (
-    state: IAppState,
-    props: IProvidedProps,
-  ): IFormElementProps => ({
+  return (state: IAppState, props: IProvidedProps): IFormElementProps => ({
     activeList: props.activeList,
     id: props.id,
     firstInActiveList: props.firstInActiveList,
@@ -188,7 +185,6 @@ const makeMapStateToProps = () => {
     textResources: state.appData.textResources.resources,
     dataModel: state.appData.dataModel.model,
   });
-  return mapStateToProps;
 };
 
 /**

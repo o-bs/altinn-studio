@@ -1,4 +1,4 @@
-import { getLanguageFromKey } from 'app-shared/utils/language';
+import { getLanguageFromKey } from 'altinn-shared/utils/language';
 import { v4 as uuidv4 } from 'uuid';
 import type { Dispatch } from 'redux';
 import { LayoutItemType } from '../containers/Toolbar';

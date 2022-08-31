@@ -1,4 +1,4 @@
-import { UiSchemaItem } from '../types';
+import type { UiSchemaItem } from '../types';
 import { ObjectKind } from '../types/enums';
 
 export function getObjectKind(item?: UiSchemaItem) {

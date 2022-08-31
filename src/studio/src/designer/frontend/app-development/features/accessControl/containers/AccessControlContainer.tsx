@@ -6,16 +6,16 @@ import {
 } from '@material-ui/core';
 import React from 'react';
 import { connect } from 'react-redux';
-import { Dispatch } from 'redux';
-import AltinnCheckBox from 'app-shared/components/AltinnCheckBox';
-import AltinnCheckBoxGroup from 'app-shared/components/AltinnCheckBoxGroup';
-import AltinnColumnLayout from 'app-shared/components/AltinnColumnLayout';
-import AltinnFormControlLabel from 'app-shared/components/AltinnFormControlLabel';
-import altinnTheme from 'app-shared/theme/altinnStudioTheme';
-import { getLanguageFromKey } from 'app-shared/utils/language';
-import VersionControlHeader from 'app-shared/version-control/versionControlHeader';
-import { ApplicationMetadataActions } from '../../../sharedResources/applicationMetadata/applicationMetadataSlice';
-import { makeGetApplicationMetadata } from '../../../sharedResources/applicationMetadata/selectors/applicationMetadataSelector';
+import type { Dispatch } from 'redux';
+import AltinnCheckBox from 'altinn-shared/components/AltinnCheckBox';
+import AltinnCheckBoxGroup from 'altinn-shared/components/AltinnCheckBoxGroup';
+import AltinnColumnLayout from 'altinn-shared/components/AltinnColumnLayout';
+import AltinnFormControlLabel from 'altinn-shared/components/AltinnFormControlLabel';
+import altinnTheme from 'altinn-shared/theme/altinnStudioTheme';
+import { getLanguageFromKey } from 'altinn-shared/utils/language';
+import VersionControlHeader from 'altinn-shared/version-control/versionControlHeader';
+import { ApplicationMetadataActions } from '../..altinn-sharedResources/applicationMetadata/applicationMetadataSlice';
+import { makeGetApplicationMetadata } from '../..altinn-sharedResources/applicationMetadata/selectors/applicationMetadataSelector';
 import type { RootState } from 'store';
 
 const theme = createTheme(altinnTheme);

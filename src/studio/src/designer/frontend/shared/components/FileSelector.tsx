@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyledComponentProps } from '@material-ui/core';
+import type { StyledComponentProps } from '@material-ui/core';
 import { getLanguageFromKey } from '../utils/language';
 import { TopToolbarButton } from '../../packages/schema-editor/src/components/TopToolbarButton';
 

@@ -1,10 +1,10 @@
-import { post } from 'app-shared/utils/networking';
-import { SagaIterator } from 'redux-saga';
+import { post } from 'altinn-shared/utils/networking';
+import type { SagaIterator } from 'redux-saga';
 import { call, fork, put, takeLatest } from 'redux-saga/effects';
-import { PayloadAction } from '@reduxjs/toolkit';
+import type { PayloadAction } from '@reduxjs/toolkit';
 import { get } from '../../utils/networking';
+import type { ILoadTextResourcesAction } from './textResources/textResourcesSlice';
 import {
-  ILoadTextResourcesAction,
   loadTextResources,
   loadTextResourcesFulfilled,
   loadTextResourcesRejected,
@@ -23,11 +23,11 @@ import {
   fetchDataModelFulfilled,
   fetchDataModelRejected,
 } from './dataModel/dataModelSlice';
+import type { IFetchLanguage } from './language/languageSlice';
 import {
   fetchLanguage,
   fetchLanguageFulfilled,
   fetchLanguageRejected,
-  IFetchLanguage,
 } from './language/languageSlice';
 import {
   fetchRuleModel,

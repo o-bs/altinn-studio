@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { AppBar, Divider } from '@material-ui/core';
 import { createStyles, makeStyles } from '@material-ui/core/styles';
 import { TabContext, TabList, TabPanel } from '@material-ui/lab';
-import { ILanguage, UiSchemaItem } from '../types';
+import type { ILanguage, UiSchemaItem } from '../types';
 import { ObjectKind } from '../types/enums';
 import { getTranslation } from '../utils/language';
 import { SchemaTab } from './SchemaTab';

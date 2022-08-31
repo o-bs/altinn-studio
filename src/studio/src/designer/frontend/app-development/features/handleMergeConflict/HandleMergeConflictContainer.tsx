@@ -1,19 +1,19 @@
 import { Typography } from '@material-ui/core';
 import Grid from '@material-ui/core/Grid';
+import type { WithStyles } from '@material-ui/core/styles';
 import {
   createTheme,
   createStyles,
   MuiThemeProvider,
   withStyles,
-  WithStyles,
 } from '@material-ui/core/styles';
 import classNames from 'classnames';
 import React from 'react';
 import { connect } from 'react-redux';
-import FileEditor from 'app-shared/file-editor/FileEditor';
-import altinnTheme from 'app-shared/theme/altinnStudioTheme';
-import { getLanguageFromKey } from 'app-shared/utils/language';
-import VersionControlHeader from 'app-shared/version-control/versionControlHeader';
+import FileEditor from 'altinn-shared/file-editor/FileEditor';
+import altinnTheme from 'altinn-shared/theme/altinnStudioTheme';
+import { getLanguageFromKey } from 'altinn-shared/utils/language';
+import VersionControlHeader from 'altinn-shared/version-control/versionControlHeader';
 import { makeGetRepoStatusSelector } from './handleMergeConflictSelectors';
 import HandleMergeConflictAbortComponent from './components/HandleMergeConflictAbort';
 import HandleMergeConflictDiscardChangesComponent from './components/HandleMergeConflictDiscardChanges';

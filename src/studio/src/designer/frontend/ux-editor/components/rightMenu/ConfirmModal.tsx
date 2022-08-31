@@ -6,8 +6,8 @@ import {
   Typography,
 } from '@material-ui/core';
 import React from 'react';
-import studioTheme from 'app-shared/theme/altinnStudioTheme';
-import AltinnButton from 'app-shared/components/AltinnButton';
+import studioTheme from 'altinn-shared/theme/altinnStudioTheme';
+import AltinnButton from 'altinn-shared/components/AltinnButton';
 
 export interface IConfirmModalProps {
   header: string;

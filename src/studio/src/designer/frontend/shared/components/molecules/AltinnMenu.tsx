@@ -1,5 +1,6 @@
 import React from 'react';
-import { MenuProps, Menu, makeStyles } from '@material-ui/core';
+import type { MenuProps } from '@material-ui/core';
+import { Menu, makeStyles } from '@material-ui/core';
 
 const useStyles = makeStyles(() => ({
   paper: {

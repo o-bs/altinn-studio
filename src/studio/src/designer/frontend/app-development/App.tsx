@@ -6,11 +6,11 @@ import {
 } from '@material-ui/core/styles';
 import React from 'react';
 import { HashRouter as Router } from 'react-router-dom';
-import altinnTheme from 'app-shared/theme/altinnStudioTheme';
-import postMessages from 'app-shared/utils/postMessages';
-import AltinnPopoverSimple from 'app-shared/components/molecules/AltinnPopoverSimple';
-import { getLanguageFromKey } from 'app-shared/utils/language';
-import { DataModelsMetadataActions } from 'app-shared/features/dataModelling/sagas/metadata';
+import altinnTheme from 'altinn-shared/theme/altinnStudioTheme';
+import postMessages from 'altinn-shared/utils/postMessages';
+import AltinnPopoverSimple from 'altinn-shared/components/molecules/AltinnPopoverSimple';
+import { getLanguageFromKey } from 'altinn-shared/utils/language';
+import { DataModelsMetadataActions } from 'altinn-shared/features/dataModelling/sagas/metadata';
 import { HandleServiceInformationActions } from './features/administration/handleServiceInformationSlice';
 import { fetchRepoStatus } from './features/handleMergeConflict/handleMergeConflictSlice';
 import { makeGetRepoStatusSelector } from './features/handleMergeConflict/handleMergeConflictSelectors';
@@ -24,7 +24,7 @@ import {
 } from './sharedResources/user/userSlice';
 import LeftMenu from './layout/LeftMenu';
 import PageHeader from './layout/PageHeader';
-import { useAppDispatch, useAppSelector } from 'common/hooks';
+import { useAppDispatch, useAppSelector } from './common/hooks';
 import type { IAltinnWindow } from './types/global';
 
 import './App.css';

@@ -1,10 +1,10 @@
+import type { WithStyles } from '@material-ui/core';
 import {
   createTheme,
   createStyles,
   Grid,
   Popover,
   Typography,
-  WithStyles,
   withStyles,
 } from '@material-ui/core';
 import axios from 'axios';

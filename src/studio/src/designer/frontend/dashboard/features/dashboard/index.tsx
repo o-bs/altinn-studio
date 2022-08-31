@@ -7,8 +7,8 @@ import { useDebounce } from 'react-use';
 import cn from 'classnames';
 import { Link } from 'react-router-dom';
 
-import altinnTheme from 'app-shared/theme/altinnStudioTheme';
-import { getLanguageFromKey } from 'app-shared/utils/language';
+import altinnTheme from 'altinn-shared/theme/altinnStudioTheme';
+import { getLanguageFromKey } from 'altinn-shared/utils/language';
 
 import { useAppSelector } from 'common/hooks';
 

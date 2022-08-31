@@ -8,8 +8,8 @@ import userEvent from '@testing-library/user-event';
 
 import { renderWithProviders, setupServer, handlers } from 'test/testUtils';
 
-import { Dashboard } from 'features/dashboard';
-import { SelectedContextType } from 'app-shared/navigation/main-header/Header';
+import { Dashboard } from '../../features/dashboard';
+import { SelectedContextType } from 'altinn-shared/navigation/main-header/Header';
 
 const server = setupServer(...handlers);
 

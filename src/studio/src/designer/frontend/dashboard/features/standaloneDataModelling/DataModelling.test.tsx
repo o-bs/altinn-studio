@@ -3,7 +3,7 @@ import ReactRouter from 'react-router';
 import { Provider } from 'react-redux';
 import configureStore from 'redux-mock-store';
 import DataModelling from './DataModelling';
-import { LoadingState } from 'app-shared/features/dataModelling/sagas/metadata';
+import { LoadingState } from 'altinn-shared/features/dataModelling/sagas/metadata';
 
 import { render as rtlRender } from '@testing-library/react';
 

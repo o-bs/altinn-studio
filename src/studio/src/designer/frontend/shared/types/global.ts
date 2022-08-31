@@ -167,7 +167,7 @@ export interface IComponentsSettings {
 export interface IRepository {
   name: string;
   full_name: string;
-  owner: IUser
+  owner: IUser;
   description: string;
   is_cloned_to_local: boolean;
   updated_at: string;

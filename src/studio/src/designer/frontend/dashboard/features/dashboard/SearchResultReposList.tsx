@@ -1,14 +1,14 @@
 import React from 'react';
-import { GridSortModel } from '@mui/x-data-grid';
+import type { GridSortModel } from '@mui/x-data-grid';
 import { Typography } from '@material-ui/core';
 
-import { getLanguageFromKey } from 'app-shared/utils/language';
+import { getLanguageFromKey } from 'altinn-shared/utils/language';
 
-import { useGetUserStarredReposQuery } from 'services/userApi';
+import { useGetUserStarredReposQuery } from '../../services/userApi';
 
-import { useAppSelector } from 'common/hooks';
-import { RepoList } from 'common/components/RepoList';
-import { useGetSearchQuery } from 'services/repoApi';
+import { useAppSelector } from '../../common/hooks';
+import { RepoList } from '../../common/components/RepoList';
+import { useGetSearchQuery } from '../../services/repoApi';
 import { useAugmentReposWithStarred } from './hooks';
 
 const rowsPerPageOptions = [8];

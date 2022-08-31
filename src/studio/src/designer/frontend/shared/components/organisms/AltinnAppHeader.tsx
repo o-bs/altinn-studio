@@ -1,10 +1,10 @@
+import type { WithStyles } from '@material-ui/core';
 import {
   AppBar,
   createStyles,
   Grid,
   Typography,
   withStyles,
-  WithStyles,
 } from '@material-ui/core';
 import React from 'react';
 import type { IParty } from '../../types/global';

@@ -1,15 +1,15 @@
 import { Typography } from '@material-ui/core';
-import { AltinnSpinner } from 'app-shared/components';
-import AltinnInputField from 'app-shared/components/AltinnInputField';
-import AltinnPopoverSimple from 'app-shared/components/molecules/AltinnPopoverSimple';
+import { AltinnSpinner } from 'altinn-shared/components';
+import AltinnInputField from 'altinn-shared/components/AltinnInputField';
+import AltinnPopoverSimple from 'altinn-shared/components/molecules/AltinnPopoverSimple';
 import {
   getLanguageFromKey,
   getParsedLanguageFromKey,
-} from 'app-shared/utils/language';
-import { post } from 'app-shared/utils/networking';
+} from 'altinn-shared/utils/language';
+import { post } from 'altinn-shared/utils/networking';
 import React from 'react';
 import { DashboardActions } from '../../resources/fetchDashboardResources/dashboardSlice';
-import { PopoverOrigin } from '@material-ui/core/Popover';
+import type { PopoverOrigin } from '@material-ui/core/Popover';
 import { useAppSelector, useAppDispatch } from 'common/hooks';
 import { validateRepoName } from 'common/utils';
 

@@ -1,9 +1,9 @@
-import { PayloadAction } from '@reduxjs/toolkit';
-import { SagaIterator } from 'redux-saga';
+import type { PayloadAction } from '@reduxjs/toolkit';
+import type { SagaIterator } from 'redux-saga';
 import { call, fork, put, takeLatest } from 'redux-saga/effects';
-import type { IRepository } from 'app-shared/types/global';
-import { get } from 'app-shared/utils/networking';
-import { dataModellingSagas } from 'app-shared/features/dataModelling/sagas';
+import type { IRepository } from 'altinn-shared/types/global';
+import { get } from 'altinn-shared/utils/networking';
+import { dataModellingSagas } from 'altinn-shared/features/dataModelling/sagas';
 import { DashboardActions } from './dashboardSlice';
 import type { IFetchDashboardInfoAction } from './dashboardSlice';
 

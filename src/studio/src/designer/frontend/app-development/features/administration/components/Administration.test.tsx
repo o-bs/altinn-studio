@@ -3,7 +3,7 @@ import { fireEvent, screen, waitFor } from '@testing-library/react';
 import { Administration } from './Administration';
 import { renderWithProviders } from 'test/testUtils';
 import type { ICommit, IRepository } from '../../../types/global';
-import type { IHandleServiceInformationState } from 'features/administration/handleServiceInformationSlice';
+import type { IHandleServiceInformationState } from '../../../features/administration/handleServiceInformationSlice';
 
 describe('Administration', () => {
   const mockService: IRepository = {

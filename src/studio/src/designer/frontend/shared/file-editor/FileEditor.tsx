@@ -92,7 +92,7 @@ const styles = createStyles({
     minHeight: '100%',
   },
   selectFile: {
-    borderBottom: '1px solid' + theme.altinnPalette.primary.blueDark,
+    borderBottom: `1px solid${theme.altinnPalette.primary.blueDark}`,
     color: theme.altinnPalette.primary.blueDarker,
     fontSize: '1.6rem',
   },
@@ -250,7 +250,7 @@ class FileEditor extends React.Component<
     const dataModelSuggestions = this.props.getDataModelSuggestions
       ? this.props.getDataModelSuggestions(filterText)
       : [];
-    const suggestions = dataModelSuggestions.map((item: any) => {
+    return dataModelSuggestions.map((item: any) => {
       return {
         label: item.Name,
         kind: monaco.languages.CompletionItemKind.Field,
@@ -258,8 +258,6 @@ class FileEditor extends React.Component<
         insertText: item.Name,
       };
     });
-
-    return suggestions;
   };
 
   public onValueChange = (value: string) => {
@@ -303,11 +301,7 @@ class FileEditor extends React.Component<
       <Grid item={true} xs={1} className={this.props.classes.fileHeader}>
         <IconButton
           type='button'
-          className={
-            this.props.classes.formComponentsBtn +
-            ' ' +
-            this.props.classes.specialBtn
-          }
+          className={`${this.props.classes.formComponentsBtn} ${this.props.classes.specialBtn}`}
           onClick={this.props.closeFileEditor}
         >
           <i
@@ -319,11 +313,7 @@ class FileEditor extends React.Component<
         </IconButton>
         <IconButton
           type='button'
-          className={
-            this.props.classes.formComponentsBtn +
-            ' ' +
-            this.props.classes.specialBtn
-          }
+          className={`${this.props.classes.formComponentsBtn} ${this.props.classes.specialBtn}`}
           onClick={this.saveFile}
         >
           <i className='fa fa-circlecheck' id='fileEditorCheck' tabIndex={0} />

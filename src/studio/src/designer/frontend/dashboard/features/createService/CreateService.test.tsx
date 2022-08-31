@@ -9,8 +9,8 @@ import {
   handlers,
 } from 'test/testUtils';
 
-import { CreateService } from 'features/createService/CreateService';
-import { SelectedContextType } from 'app-shared/navigation/main-header/Header';
+import { CreateService } from '../../features/createService/CreateService';
+import { SelectedContextType } from 'altinn-shared/navigation/main-header/Header';
 
 const server = setupServer(...handlers);
 

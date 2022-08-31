@@ -1,7 +1,7 @@
-import { PayloadAction } from '@reduxjs/toolkit';
+import type { PayloadAction } from '@reduxjs/toolkit';
 import { put, select, takeLatest } from 'redux-saga/effects';
 import { v4 as uuidv4 } from 'uuid';
-import { SagaIterator } from 'redux-saga';
+import type { SagaIterator } from 'redux-saga';
 import { FormLayoutActions } from '../formLayout/formLayoutSlice';
 import type { IAddWidgetAction } from '../formDesignerTypes';
 import { convertFromLayoutToInternalFormat } from '../../../utils/formLayout';

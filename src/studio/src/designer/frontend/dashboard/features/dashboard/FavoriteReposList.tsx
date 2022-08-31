@@ -1,12 +1,12 @@
 import React from 'react';
 import { Typography } from '@material-ui/core';
 
-import { getLanguageFromKey } from 'app-shared/utils/language';
+import { getLanguageFromKey } from 'altinn-shared/utils/language';
 
-import { useAppSelector } from 'common/hooks';
+import { useAppSelector } from '../../common/hooks';
 
-import { RepoList } from 'common/components/RepoList';
-import { useGetUserStarredReposQuery } from 'services/userApi';
+import { RepoList } from '../../common/components/RepoList';
+import { useGetUserStarredReposQuery } from '../../services/userApi';
 
 export const FavoriteReposList = () => {
   const language = useAppSelector((state) => state.language.language);

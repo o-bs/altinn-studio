@@ -1,20 +1,19 @@
 /* eslint-disable react/no-find-dom-node */
 import React from 'react';
-import {
+import type {
   ConnectDragPreview,
   ConnectDragSource,
   ConnectDropTarget,
-  DragSource,
   DragSourceConnector,
   DragSourceMonitor,
   DragSourceSpec,
-  DropTarget,
   DropTargetConnector,
   DropTargetMonitor,
   DropTargetSpec,
 } from 'react-dnd';
+import { DragSource, DropTarget } from 'react-dnd';
 import ReactDOM from 'react-dom';
-import altinnTheme from 'app-shared/theme/altinnStudioTheme';
+import altinnTheme from 'altinn-shared/theme/altinnStudioTheme';
 
 const dragSourceSpec: DragSourceSpec<IDroppableDraggableContainerProps, any> = {
   beginDrag(props: IDroppableDraggableContainerProps) {

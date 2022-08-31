@@ -7,7 +7,7 @@ import {
   IconButton,
 } from '@material-ui/core';
 import { getTranslation } from '../../utils/language';
-import { ILanguage, Restriction, UiSchemaItem } from '../../types';
+import type { ILanguage, Restriction, UiSchemaItem } from '../../types';
 import { RestrictionField } from '../RestrictionField';
 import { EnumField } from '../EnumField';
 import {
@@ -118,7 +118,7 @@ export const ItemRestrictionsTab = ({
   const renderEnums = (item: UiSchemaItem) =>
     item.enum?.map((value: string, index) => (
       <EnumField
-        key={'add-enum-field-' + index}
+        key={`add-enum-field-${index}`}
         language={language}
         path={item.path}
         fullWidth={true}

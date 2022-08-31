@@ -25,7 +25,7 @@ const mockUiSchema: UiSchemaItem[] = [
       },
     ],
     type: 'object',
-    required: ['id3']
+    required: ['id3'],
   },
   {
     path: '#/properties/allOfTest',

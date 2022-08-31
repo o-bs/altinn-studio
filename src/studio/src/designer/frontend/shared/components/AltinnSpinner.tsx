@@ -5,7 +5,8 @@ import {
   makeStyles,
   Typography,
 } from '@material-ui/core';
-import classNames, { Argument } from 'classnames';
+import type { Argument } from 'classnames';
+import classNames from 'classnames';
 import React from 'react';
 import altinnTheme from '../theme/altinnStudioTheme';
 

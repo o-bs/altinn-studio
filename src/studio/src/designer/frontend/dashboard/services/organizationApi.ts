@@ -1,4 +1,4 @@
-import type { IGiteaOrganisation } from 'app-shared/types/global';
+import type { IGiteaOrganisation } from 'altinn-shared/types/global';
 import { designerApi, TagTypes } from './designerApi';
 
 export type Organizations = Array<IGiteaOrganisation>;

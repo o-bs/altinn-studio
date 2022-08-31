@@ -1,7 +1,7 @@
 import { Grid, IconButton, ListItem, makeStyles } from '@material-ui/core';
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import altinnTheme from 'app-shared/theme/altinnStudioTheme';
+import altinnTheme from 'altinn-shared/theme/altinnStudioTheme';
 import { EditModalContent } from '../components/config/EditModalContent';
 import { makeGetLayoutOrderSelector } from '../selectors/getLayoutData';
 import '../styles/index.css';
@@ -12,7 +12,7 @@ import {
 } from '../utils/language';
 import { componentIcons } from '../components';
 import { FormLayoutActions } from '../features/formDesigner/formLayout/formLayoutSlice';
-import { getLanguageFromKey } from 'app-shared/utils/language';
+import { getLanguageFromKey } from 'altinn-shared/utils/language';
 import type {
   FormComponentType,
   IFormComponent,

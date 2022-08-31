@@ -1,19 +1,19 @@
 import React from 'react';
-import postMessages from 'app-shared/utils/postMessages';
-import {useDispatch} from 'react-redux';
-import {ErrorMessageComponent} from './components/message/ErrorMessageComponent';
+import postMessages from 'altinn-shared/utils/postMessages';
+import { useDispatch } from 'react-redux';
+import { ErrorMessageComponent } from './components/message/ErrorMessageComponent';
 import FormDesigner from './containers/FormDesigner';
-import {FormLayoutActions} from './features/formDesigner/formLayout/formLayoutSlice';
-import {loadTextResources} from './features/appData/textResources/textResourcesSlice';
+import { FormLayoutActions } from './features/formDesigner/formLayout/formLayoutSlice';
+import { loadTextResources } from './features/appData/textResources/textResourcesSlice';
 import {
   fetchWidgets,
   fetchWidgetSettings,
 } from './features/widgets/widgetsSlice';
-import {getLoadTextResourcesUrl} from './utils/urlHelper';
-import {fetchDataModel} from './features/appData/dataModel/dataModelSlice';
-import {fetchLanguage} from './features/appData/language/languageSlice';
-import {fetchRuleModel} from './features/appData/ruleModel/ruleModelSlice';
-import {fetchServiceConfiguration} from './features/serviceConfigurations/serviceConfigurationSlice';
+import { getLoadTextResourcesUrl } from './utils/urlHelper';
+import { fetchDataModel } from './features/appData/dataModel/dataModelSlice';
+import { fetchLanguage } from './features/appData/language/languageSlice';
+import { fetchRuleModel } from './features/appData/ruleModel/ruleModelSlice';
+import { fetchServiceConfiguration } from './features/serviceConfigurations/serviceConfigurationSlice';
 
 /**
  * This is the main React component responsible for controlling
@@ -31,11 +31,11 @@ export function App() {
 
       const languageCode = 'nb';
       dispatch(
-        loadTextResources({url: getLoadTextResourcesUrl(languageCode)}),
+        loadTextResources({ url: getLoadTextResourcesUrl(languageCode) }),
       );
       dispatch(fetchServiceConfiguration());
       dispatch(fetchRuleModel());
-      dispatch(fetchLanguage({languageCode}));
+      dispatch(fetchLanguage({ languageCode }));
       dispatch(fetchWidgetSettings());
       dispatch(FormLayoutActions.fetchLayoutSettings());
       dispatch(fetchWidgets());
@@ -56,8 +56,8 @@ export function App() {
 
   return (
     <>
-      <ErrorMessageComponent/>
-      <FormDesigner/>
+      <ErrorMessageComponent />
+      <FormDesigner />
     </>
   );
 }

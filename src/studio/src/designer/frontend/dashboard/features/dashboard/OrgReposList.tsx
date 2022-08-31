@@ -1,12 +1,12 @@
 import React from 'react';
-import { GridSortModel } from '@mui/x-data-grid';
+import type { GridSortModel } from '@mui/x-data-grid';
 import { Typography } from '@material-ui/core';
 
-import { RepoList } from 'common/components/RepoList';
-import { useGetSearchQuery } from 'services/repoApi';
-import { useGetOrganizationsQuery } from 'services/organizationApi';
-import { useAppSelector, useAppDispatch } from 'common/hooks';
-import { useGetUserStarredReposQuery } from 'services/userApi';
+import { RepoList } from '../../common/components/RepoList';
+import { useGetSearchQuery } from '../../services/repoApi';
+import { useGetOrganizationsQuery } from '../../services/organizationApi';
+import { useAppSelector, useAppDispatch } from '../../common/hooks';
+import { useGetUserStarredReposQuery } from '../../services/userApi';
 import { DashboardActions } from '../../resources/fetchDashboardResources/dashboardSlice';
 
 import { useAugmentReposWithStarred } from './hooks';
@@ -22,7 +22,7 @@ export const OrgReposList = () => {
     (state) => state.dashboard.selectedContext,
   );
   const userId = useAppSelector((state) => state.dashboard.user.id);
-  const { data: orgs = [] } = useGetOrganizationsQuery()
+  const { data: orgs = [] } = useGetOrganizationsQuery();
   const [page, setPage] = React.useState(0);
   const uid = getUidFilter({ selectedContext, userId });
 

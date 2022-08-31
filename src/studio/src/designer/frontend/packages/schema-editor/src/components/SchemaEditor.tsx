@@ -8,7 +8,7 @@ import {
   AltinnMenu,
   AltinnMenuItem,
   AltinnSpinner,
-} from 'app-shared/components';
+} from 'altinn-shared/components';
 import type { ILanguage, ISchema, ISchemaState, UiSchemaItem } from '../types';
 import { ObjectKind } from '../types/enums';
 import {
@@ -29,7 +29,7 @@ import {
 import { SchemaInspector } from './SchemaInspector';
 import { SchemaTab } from './SchemaTab';
 import { TopToolbar } from './TopToolbar';
-import { getLanguageFromKey } from 'app-shared/utils/language';
+import { getLanguageFromKey } from 'altinn-shared/utils/language';
 import { isNameInUse } from '../utils/checks';
 
 const useStyles = makeStyles({

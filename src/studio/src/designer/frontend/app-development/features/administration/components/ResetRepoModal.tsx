@@ -6,15 +6,16 @@ import {
   Typography,
 } from '@material-ui/core';
 import React from 'react';
-import AltinnButton from 'app-shared/components/AltinnButton';
-import AltinnInputField from 'app-shared/components/AltinnInputField';
-import studioTheme from 'app-shared/theme/altinnStudioTheme';
+
+import AltinnButton from 'altinn-shared/components/AltinnButton';
+import AltinnInputField from 'altinn-shared/components/AltinnInputField';
+import studioTheme from 'altinn-shared/theme/altinnStudioTheme';
 import {
   getLanguageFromKey,
   getParsedLanguageFromKey,
-} from 'app-shared/utils/language';
-import AltinnSpinner from 'app-shared/components/AltinnSpinner';
-import { useAppSelector } from 'common/hooks';
+} from 'altinn-shared/utils/language';
+import AltinnSpinner from 'altinn-shared/components/AltinnSpinner';
+import { useAppSelector } from '../../../common/hooks';
 
 const theme = createTheme(studioTheme);
 

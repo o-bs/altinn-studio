@@ -1,9 +1,9 @@
 import React from 'react';
 import { HandleMergeConflictAbort } from './HandleMergeConflictAbort';
 import { render, screen } from '@testing-library/react';
-import * as networking from 'app-shared/utils/networking';
+import * as networking from 'altinn-shared/utils/networking';
 import userEvent from '@testing-library/user-event';
-import { UserEvent } from '@testing-library/user-event/setup/setup';
+import type { UserEvent } from '@testing-library/user-event/setup/setup';
 
 const renderHandleMergeConflictAbort = () => {
   const user = userEvent.setup();

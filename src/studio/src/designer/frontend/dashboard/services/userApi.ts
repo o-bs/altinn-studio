@@ -1,5 +1,5 @@
 import { designerApi, TagTypes } from './designerApi';
-import type { IRepository } from 'app-shared/types/global';
+import type { IRepository } from 'altinn-shared/types/global';
 
 export type Organizations = Array<string>;
 

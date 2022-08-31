@@ -1,20 +1,15 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { Dispatch } from 'redux';
-import altinnTheme from 'app-shared/theme/altinnStudioTheme';
-import {
-  createStyles,
-  IconButton,
-  withStyles,
-  WithStyles,
-  Grid,
-} from '@material-ui/core';
+import type { Dispatch } from 'redux';
+import altinnTheme from 'altinn-shared/theme/altinnStudioTheme';
+import type { WithStyles } from '@material-ui/core';
+import { createStyles, IconButton, withStyles, Grid } from '@material-ui/core';
 
 import '../styles/index.css';
-import AltinnInputField from 'app-shared/components/AltinnInputField';
-import { getLanguageFromKey } from 'app-shared/utils/language';
-import AltinnCheckBox from 'app-shared/components/AltinnCheckBox';
-import ErrorPopover from 'app-shared/components/ErrorPopover';
+import AltinnInputField from 'altinn-shared/components/AltinnInputField';
+import { getLanguageFromKey } from 'altinn-shared/utils/language';
+import AltinnCheckBox from 'altinn-shared/components/AltinnCheckBox';
+import ErrorPopover from 'altinn-shared/components/ErrorPopover';
 import {
   makeGetActiveFormContainer,
   makeGetLayoutComponentsSelector,
@@ -497,11 +492,7 @@ export class ContainerComponent extends React.Component<
           ref={ref}
           className={this.props.classes.wrapper}
         >
-          <Grid
-            item={true}
-            xs={11}
-            className={className}
-          >
+          <Grid item={true} xs={11} className={className}>
             {!this.props.baseContainer && (
               <Grid item={true} style={{ paddingTop: '12px' }}>
                 <IconButton
@@ -694,11 +685,7 @@ export class ContainerComponent extends React.Component<
     return (
       <Grid container={true}>
         <Grid container={true} className={this.props.classes.editWrapper}>
-          <Grid
-            item={true}
-            xs={11}
-            className={this.props.classes.editSection}
-          >
+          <Grid item={true} xs={11} className={this.props.classes.editSection}>
             {this.renderEditSection()}
           </Grid>
           <Grid item={true} xs={1} className={this.props.classes.containerEdit}>

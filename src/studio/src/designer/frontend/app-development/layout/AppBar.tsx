@@ -7,11 +7,11 @@ import Toolbar from '@material-ui/core/Toolbar';
 import classNames from 'classnames';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { altinnImgLogoHeaderUrl } from 'app-shared/utils/urlHelper';
-import type { IMenuItem } from 'app-shared/navigation/drawer/drawerMenuSettings';
-import TabletDrawerMenu from 'app-shared/navigation/drawer/TabletDrawerMenu';
+import { altinnImgLogoHeaderUrl } from 'altinn-shared/utils/urlHelper';
+import type { IMenuItem } from 'altinn-shared/navigation/drawer/drawerMenuSettings';
+import TabletDrawerMenu from 'altinn-shared/navigation/drawer/TabletDrawerMenu';
 import { menu } from './appBarConfig';
-import ProfileMenu from 'app-shared/navigation/main-header/profileMenu';
+import ProfileMenu from 'altinn-shared/navigation/main-header/profileMenu';
 
 export interface IAppBarProps {
   activeSubHeaderSelection?: string;

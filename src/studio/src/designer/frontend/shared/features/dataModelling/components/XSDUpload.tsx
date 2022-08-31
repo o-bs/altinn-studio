@@ -1,8 +1,7 @@
 import React from 'react';
-import { FileSelector, AltinnSpinner } from 'app-shared/components';
-import { getLanguageFromKey } from 'app-shared/utils/language';
+import { FileSelector, AltinnSpinner, ErrorPopover } from '../../../components';
+import { getLanguageFromKey } from '../../../utils/language';
 import axios from 'axios';
-import ErrorPopover from "app-shared/components/ErrorPopover";
 
 export interface IXSDUploadProps {
   language: any;

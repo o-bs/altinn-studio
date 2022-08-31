@@ -2,9 +2,9 @@ import {
   getUidFilter,
   getReposLabel,
   mergeRepos,
-} from 'features/dashboard/utils';
-import { SelectedContextType } from 'app-shared/navigation/main-header/Header';
-import { Organizations } from 'services/organizationApi';
+} from '../../features/dashboard/utils';
+import { SelectedContextType } from 'altinn-shared/navigation/main-header/Header';
+import type { Organizations } from '../../services/organizationApi';
 
 const language = {
   dashboard: {

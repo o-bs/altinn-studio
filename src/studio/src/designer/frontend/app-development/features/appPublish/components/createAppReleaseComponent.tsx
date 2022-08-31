@@ -1,24 +1,19 @@
-import {
-  createStyles,
-  Grid,
-  Typography,
-  withStyles,
-  WithStyles,
-} from '@material-ui/core';
+import type { WithStyles } from '@material-ui/core';
+import { createStyles, Grid, Typography, withStyles } from '@material-ui/core';
 import React from 'react';
-import AltinnButton from 'app-shared/components/AltinnButton';
-import AltinnInput from 'app-shared/components/AltinnInput';
-import AltinnTextArea from 'app-shared/components/AltinnTextArea';
-import AltinnPopover from 'app-shared/components/molecules/AltinnPopoverSimple';
-import theme from 'app-shared/theme/altinnAppTheme';
-import { getLanguageFromKey } from 'app-shared/utils/language';
-import { AppReleaseActions } from '../../../sharedResources/appRelease/appReleaseSlice';
-import type { IAppReleaseState } from '../../../sharedResources/appRelease/appReleaseSlice';
+import AltinnButton from 'altinn-shared/components/AltinnButton';
+import AltinnInput from 'altinn-shared/components/AltinnInput';
+import AltinnTextArea from 'altinn-shared/components/AltinnTextArea';
+import AltinnPopover from 'altinn-shared/components/molecules/AltinnPopoverSimple';
+import theme from 'altinn-shared/theme/altinnAppTheme';
+import { getLanguageFromKey } from 'altinn-shared/utils/language';
+import { AppReleaseActions } from '../..altinn-sharedResources/appRelease/appReleaseSlice';
+import type { IAppReleaseState } from '../..altinn-sharedResources/appRelease/appReleaseSlice';
 import {
   BuildResult,
   BuildStatus,
-} from '../../../sharedResources/appRelease/types';
-import type { IRepoStatusState } from '../../../sharedResources/repoStatus/repoStatusSlice';
+} from '../..altinn-sharedResources/appRelease/types';
+import type { IRepoStatusState } from '../..altinn-sharedResources/repoStatus/repoStatusSlice';
 import { useAppSelector, useAppDispatch } from 'common/hooks';
 
 const styles = createStyles({
@@ -141,7 +136,11 @@ function ReleaseComponent(props: ICreateAppReleaseComponent) {
           direction='column'
           className={classes.createReleaseFormItem}
         >
-          <Grid container={true} direction='column-reverse' justifyContent='flex-end'>
+          <Grid
+            container={true}
+            direction='column-reverse'
+            justifyContent='flex-end'
+          >
             {!versionNameValid() ? (
               <Grid
                 className={classes.createReleaseInvalidTagNameWrapper}

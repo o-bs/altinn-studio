@@ -27,7 +27,7 @@ const selectStyles = {
   }),
 };
 
-export class SelectDataModel extends React.Component<
+class SelectDataModel extends React.Component<
   ISelectDataModelProps,
   ISelectDataModelState
 > {
@@ -126,5 +126,4 @@ const mapStateToProps = (
   };
 };
 
-export const SelectDataModelComponent =
-  connect(mapStateToProps)(SelectDataModel);
+export default connect(mapStateToProps)(SelectDataModel);

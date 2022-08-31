@@ -11,7 +11,7 @@ import {
 } from '../utils/schema';
 import { fireEvent, render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import { UiSchemaItem } from '../types';
+import type { UiSchemaItem } from '../types';
 
 const getMockSchemaByPath = (selectedId: string): UiSchemaItem => {
   const mockUiSchema = buildUISchema(dataMock.definitions, '#/definitions');

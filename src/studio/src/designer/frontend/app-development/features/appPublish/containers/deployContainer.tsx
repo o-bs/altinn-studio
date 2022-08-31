@@ -1,26 +1,21 @@
-import {
-  createTheme,
-  createStyles,
-  Grid,
-  WithStyles,
-  withStyles,
-} from '@material-ui/core';
+import type { WithStyles } from '@material-ui/core';
+import { createTheme, createStyles, Grid, withStyles } from '@material-ui/core';
 import moment from 'moment';
 import React from 'react';
-import AltinnContentLoader from 'app-shared/components/molecules/AltinnContentLoader';
-import StudioTheme from 'app-shared/theme/altinnStudioTheme';
+import AltinnContentLoader from 'altinn-shared/components/molecules/AltinnContentLoader';
+import StudioTheme from 'altinn-shared/theme/altinnStudioTheme';
 import {
   getDeploymentsStartInterval,
   getDeploymentsStopInterval,
-} from '../../../sharedResources/appCluster/appClusterSlice';
-import { AppDeploymentActions } from '../../../sharedResources/appDeployment/appDeploymentSlice';
-import type { IAppClusterState } from '../../../sharedResources/appCluster/appClusterSlice';
-import type { IAppDeploymentState } from '../../../sharedResources/appDeployment/appDeploymentSlice';
-import type { ICreateAppDeploymentErrors } from '../../../sharedResources/appDeployment/types';
-import type { IAppReleaseState } from '../../../sharedResources/appRelease/appReleaseSlice';
-import { BuildResult } from '../../../sharedResources/appRelease/types';
-import { ConfigurationActions } from '../../../sharedResources/configuration/configurationSlice';
-import type { IConfigurationState } from '../../../sharedResources/configuration/configurationSlice';
+} from '../..altinn-sharedResources/appCluster/appClusterSlice';
+import { AppDeploymentActions } from '../..altinn-sharedResources/appDeployment/appDeploymentSlice';
+import type { IAppClusterState } from '../..altinn-sharedResources/appCluster/appClusterSlice';
+import type { IAppDeploymentState } from '../..altinn-sharedResources/appDeployment/appDeploymentSlice';
+import type { ICreateAppDeploymentErrors } from '../..altinn-sharedResources/appDeployment/types';
+import type { IAppReleaseState } from '../..altinn-sharedResources/appRelease/appReleaseSlice';
+import { BuildResult } from '../..altinn-sharedResources/appRelease/types';
+import { ConfigurationActions } from '../..altinn-sharedResources/configuration/configurationSlice';
+import type { IConfigurationState } from '../..altinn-sharedResources/configuration/configurationSlice';
 import AppDeploymentComponent from '../components/appDeploymentComponent';
 import { useAppSelector, useAppDispatch } from 'common/hooks';
 import type { IAltinnWindow } from '../../../types/global';

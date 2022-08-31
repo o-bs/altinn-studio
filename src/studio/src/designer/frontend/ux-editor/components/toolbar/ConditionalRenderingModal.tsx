@@ -2,7 +2,7 @@ import React from 'react';
 import Modal from 'react-modal';
 import { Typography } from '@material-ui/core';
 import { useDispatch, useSelector } from 'react-redux';
-import { getLanguageFromKey } from 'app-shared/utils/language';
+import { getLanguageFromKey } from 'altinn-shared/utils/language';
 import { ConditionalRenderingComponent } from '../config/ConditionalRenderingComponent';
 import RuleButton from './RuleButton';
 import {

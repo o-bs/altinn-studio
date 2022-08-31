@@ -1,10 +1,10 @@
 import React from 'react';
 import { screen, act, waitForElementToBeRemoved } from '@testing-library/react';
 
-import { SelectedContextType } from 'app-shared/navigation/main-header/Header';
+import { SelectedContextType } from 'altinn-shared/navigation/main-header/Header';
 
 import { renderWithProviders, setupServer, handlers } from 'test/testUtils';
-import { App } from 'app/App';
+import { App } from './App';
 
 const server = setupServer(...handlers);
 

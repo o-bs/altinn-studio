@@ -7,7 +7,7 @@ import {
 import { createStyles, makeStyles } from '@material-ui/core/styles';
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import {
+import type {
   CombinationKind,
   FieldType,
   ILanguage,

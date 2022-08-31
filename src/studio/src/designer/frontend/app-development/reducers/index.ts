@@ -1,5 +1,5 @@
-import { dataModellingReducer } from 'app-shared/features/dataModelling/sagas';
-import { dataModelsMetadataReducer } from 'app-shared/features/dataModelling/sagas/metadata';
+import { dataModellingReducer } from 'altinn-shared/features/dataModelling/sagas';
+import { dataModelsMetadataReducer } from 'altinn-shared/features/dataModelling/sagas/metadata';
 import handleServiceInformationReducer from '../features/administration/handleServiceInformationSlice';
 import handleMergeConflictReducer from '../features/handleMergeConflict/handleMergeConflictSlice';
 import appClusterReducer from '../sharedResources/appCluster/appClusterSlice';

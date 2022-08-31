@@ -1,9 +1,9 @@
-import { getLanguageFromKey } from 'app-shared/utils/language';
-import { SelectedContextType } from 'app-shared/navigation/main-header/Header';
+import { getLanguageFromKey } from 'altinn-shared/utils/language';
+import { SelectedContextType } from 'altinn-shared/navigation/main-header/Header';
 
-import { SelectedContext } from '../../resources/fetchDashboardResources/dashboardSlice';
-import { Organizations } from 'services/organizationApi';
-import type { IRepository } from 'app-shared/types/global';
+import type { SelectedContext } from '../../resources/fetchDashboardResources/dashboardSlice';
+import type { Organizations } from '../../services/organizationApi';
+import type { IRepository } from 'altinn-shared/types/global';
 
 type GetUidFilter = {
   userId: number;

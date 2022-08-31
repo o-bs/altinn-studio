@@ -1,7 +1,7 @@
 import { configureStore, combineReducers } from '@reduxjs/toolkit';
 import { setupListeners } from '@reduxjs/toolkit/query';
 
-import { designerApi } from 'services/designerApi';
+import { designerApi } from '../services/designerApi';
 import { rootReducer } from './rootReducer';
 import { sagaMiddleware } from './rootSaga';
 import type { PreloadedState } from '@reduxjs/toolkit';

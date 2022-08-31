@@ -1,4 +1,4 @@
-import { SelectedContextType } from 'app-shared/navigation/main-header/Header';
+import { SelectedContextType } from 'altinn-shared/navigation/main-header/Header';
 import { validateRepoName, userHasAccessToSelectedContext } from 'common/utils';
 
 describe('validateRepoName', () => {

@@ -1,6 +1,6 @@
 import { createTheme, createStyles, withStyles } from '@material-ui/core';
 import React from 'react';
-import altinnTheme from 'app-shared/theme/altinnStudioTheme';
+import altinnTheme from 'altinn-shared/theme/altinnStudioTheme';
 import type { IAltinnWindow } from '../../types/global';
 
 interface IIFrameComponentProvidedProps {

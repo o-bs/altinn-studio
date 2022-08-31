@@ -1,6 +1,7 @@
-import { createAction, createSlice, PayloadAction } from '@reduxjs/toolkit';
-import type { IRepository } from 'app-shared/types/global';
-import { SelectedContextType } from 'app-shared/navigation/main-header/Header';
+import type { PayloadAction } from '@reduxjs/toolkit';
+import { createAction, createSlice } from '@reduxjs/toolkit';
+import type { IRepository } from 'altinn-shared/types/global';
+import { SelectedContextType } from 'altinn-shared/navigation/main-header/Header';
 
 export type User = {
   avatar_url: string;

@@ -7,9 +7,9 @@ import {
   IconButton,
   Divider,
 } from '@material-ui/core';
-import { AltinnMenu } from 'app-shared/components';
-import { post } from 'app-shared/utils/networking';
-import { sharedUrls } from 'app-shared/utils/urlHelper';
+import { AltinnMenu } from '../../components';
+import { post } from '../../utils/networking';
+import { sharedUrls } from '../../utils/urlHelper';
 import React from 'react';
 import { getOrgNameById, HeaderContext, SelectedContextType } from './Header';
 import { getLanguageFromKey } from '../../utils/language';
@@ -110,7 +110,7 @@ export function HeaderMenu({ language }: HeaderMenuProps) {
         {selectableOrgs?.map((org) => {
           return (
             <MenuItem
-              id={'menu-org-' + org.id}
+              id={`menu-org-${org.id}`}
               selected={selectedContext === org.id}
               key={org.id}
               onClick={() => handleSetSelectedContext(org.id)}

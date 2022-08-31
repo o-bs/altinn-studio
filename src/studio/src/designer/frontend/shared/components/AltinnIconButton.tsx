@@ -24,7 +24,7 @@ const styles = {
     textAlign: 'left',
     verticalAlign: 'middle',
     backgroundColor: 'transparent',
-    border: '1px dotted ' + theme.altinnPalette.primary.blueDark,
+    border: `1px dotted ${theme.altinnPalette.primary.blueDark}`,
     boxShadow: 'none',
     borderRadius: '0px',
     textTransform: 'none',

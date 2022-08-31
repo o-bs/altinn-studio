@@ -1,7 +1,7 @@
-import { SagaIterator } from 'redux-saga';
+import type { SagaIterator } from 'redux-saga';
 import { call, fork, put, takeLatest } from 'redux-saga/effects';
-import { get } from 'app-shared/utils/networking';
-import { PayloadAction } from '@reduxjs/toolkit';
+import { get } from 'altinn-shared/utils/networking';
+import type { PayloadAction } from '@reduxjs/toolkit';
 import {
   fetchLanguage,
   fetchLanguageFulfilled,

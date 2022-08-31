@@ -1,4 +1,4 @@
-import { adjustQueryParams } from 'services/repoApi';
+import { adjustQueryParams } from '../services/repoApi';
 
 describe('repoApi', () => {
   describe('adjustQueryParams', () => {

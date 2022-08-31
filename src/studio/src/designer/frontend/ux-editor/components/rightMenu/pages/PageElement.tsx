@@ -2,8 +2,9 @@ import React from 'react';
 import {
   getLanguageFromKey,
   getParsedLanguageFromKey,
-} from 'app-shared/utils/language';
+} from 'altinn-shared/utils/language';
 import { useDispatch, useSelector } from 'react-redux';
+import type { TextFieldProps } from '@material-ui/core';
 import {
   Button,
   Divider,
@@ -11,9 +12,8 @@ import {
   IconButton,
   makeStyles,
   TextField,
-  TextFieldProps,
 } from '@material-ui/core';
-import { AltinnMenu, AltinnMenuItem } from 'app-shared/components/';
+import { AltinnMenu, AltinnMenuItem } from 'altinn-shared/components/';
 import ConfirmModal from '../ConfirmModal';
 import { FormLayoutActions } from '../../../features/formDesigner/formLayout/formLayoutSlice';
 import type { IAppState } from '../../../types/global';

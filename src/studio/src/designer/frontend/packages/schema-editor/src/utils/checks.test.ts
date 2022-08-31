@@ -1,5 +1,10 @@
-import { UiSchemaItem } from "../types";
-import { isNameInUse, isPathOnDefinitionsRoot, isPathOnPropertiesRoot, isValidName } from "./checks";
+import type { UiSchemaItem } from '../types';
+import {
+  isNameInUse,
+  isPathOnDefinitionsRoot,
+  isPathOnPropertiesRoot,
+  isValidName,
+} from './checks';
 
 describe('checksUtils', () => {
   test('should not be possible to have two properties with the same name', () => {
@@ -120,10 +125,12 @@ describe('checksUtils', () => {
 
   test('should match if a definitions based path is on root', () => {
     expect(isPathOnDefinitionsRoot('#/definitions/prop1')).toBe(true);
-    expect(isPathOnDefinitionsRoot('#/definitions/prop1/properties/prop2')).toBe(
+    expect(
+      isPathOnDefinitionsRoot('#/definitions/prop1/properties/prop2'),
+    ).toBe(false);
+    expect(isPathOnDefinitionsRoot('#/$defs/prop1')).toBe(true);
+    expect(isPathOnDefinitionsRoot('#/$defs/prop1/properties/prop2')).toBe(
       false,
     );
-    expect(isPathOnDefinitionsRoot('#/$defs/prop1')).toBe(true);
-    expect(isPathOnDefinitionsRoot('#/$defs/prop1/properties/prop2')).toBe(false);
   });
 });

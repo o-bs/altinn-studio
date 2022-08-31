@@ -10,15 +10,14 @@ export interface ITwoArraysObj {
   order: any[];
 }
 
-const changeOrderNum = ({array, order}: ITwoArraysObj) => {
+const changeOrderNum = ({ array, order }: ITwoArraysObj) => {
   array.forEach((component: any) => {
     if (order.indexOf(component.id) >= 0) {
       component.order = order.indexOf(component.id);
     }
   });
   markFirstAndLastObject(array);
-  const cloneOfObj = JSON.parse(JSON.stringify({ array, order }));
-  return cloneOfObj;
+  return JSON.parse(JSON.stringify({ array, order }));
 };
 
 const findMissing = (a: any[]) => {
@@ -64,8 +63,7 @@ const markFirstAndLastObject = (array: any[]) => {
       array[i].lastInActiveList = false;
     }
   }
-  const handleMissingInOrder = findMissing(array);
-  return handleMissingInOrder;
+  return findMissing(array);
 };
 
 const getSortedArray = () => {

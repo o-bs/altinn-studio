@@ -1,12 +1,12 @@
-import { Identifier } from 'dnd-core';
+import type { Identifier } from 'dnd-core';
 import React from 'react';
-import {
+import type {
   ConnectDragSource,
-  DragSource,
   DragSourceConnector,
   DragSourceMonitor,
   DragSourceSpec,
 } from 'react-dnd';
+import { DragSource } from 'react-dnd';
 
 export interface IDraggableProps {
   id: string;

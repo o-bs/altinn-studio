@@ -4,7 +4,7 @@ import { MemoryRouter } from 'react-router-dom';
 import { render as rtlRender, screen } from '@testing-library/react';
 import { AppBar } from './AppBar';
 import type { IAppBarProps } from './AppBar';
-import altinnTheme from 'app-shared/theme/altinnStudioTheme';
+import altinnTheme from 'altinn-shared/theme/altinnStudioTheme';
 
 import { menu } from './appBarConfig';
 

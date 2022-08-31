@@ -1,9 +1,4 @@
-import {
-  createTheme,
-  createStyles,
-  Grid,
-  Typography,
-} from '@material-ui/core';
+import { createTheme, createStyles, Grid, Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import type { Theme } from '@material-ui/core';
 import Table from '@material-ui/core/Table';
@@ -16,23 +11,23 @@ import classNames from 'classnames';
 import moment from 'moment';
 import React from 'react';
 import Select from 'react-select';
-import { AltinnButton, AltinnIcon, AltinnLink } from 'app-shared/components';
-import AltinnSpinner from 'app-shared/components/AltinnSpinner';
-import AltinnPopoverSimple from 'app-shared/components/molecules/AltinnPopoverSimple';
-import altinnTheme from 'app-shared/theme/altinnStudioTheme';
-import { getValueByPath } from 'app-shared/utils/getValueByPath';
+import { AltinnButton, AltinnIcon, AltinnLink } from 'altinn-shared/components';
+import AltinnSpinner from 'altinn-shared/components/AltinnSpinner';
+import AltinnPopoverSimple from 'altinn-shared/components/molecules/AltinnPopoverSimple';
+import altinnTheme from 'altinn-shared/theme/altinnStudioTheme';
+import { getValueByPath } from 'altinn-shared/utils/getValueByPath';
 import {
   getLanguageFromKey,
   getParsedLanguageFromKey,
-} from 'app-shared/utils/language';
+} from 'altinn-shared/utils/language';
 import { useDispatch } from 'react-redux';
-import type { IEnvironmentItem } from '../../../sharedResources/appCluster/appClusterSlice';
-import { AppDeploymentActions } from '../../../sharedResources/appDeployment/appDeploymentSlice';
+import type { IEnvironmentItem } from '../..altinn-sharedResources/appCluster/appClusterSlice';
+import { AppDeploymentActions } from '../..altinn-sharedResources/appDeployment/appDeploymentSlice';
 import type {
   ICreateAppDeploymentEnvObject,
   ICreateAppDeploymentErrors,
   IDeployment,
-} from '../../../sharedResources/appDeployment/types';
+} from '../..altinn-sharedResources/appDeployment/types';
 import { getAzureDevopsBuildResultUrl } from '../../../utils/urlHelper';
 
 interface IAppDeploymentComponentProps {

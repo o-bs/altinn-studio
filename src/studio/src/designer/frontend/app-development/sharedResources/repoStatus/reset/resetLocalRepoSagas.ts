@@ -1,12 +1,12 @@
-import { PayloadAction } from '@reduxjs/toolkit';
-import { SagaIterator } from 'redux-saga';
+import type { PayloadAction } from '@reduxjs/toolkit';
+import type { SagaIterator } from 'redux-saga';
 import { call, put, takeLatest } from 'redux-saga/effects';
-import { get } from 'app-shared/utils/networking';
+import { get } from 'altinn-shared/utils/networking';
 import { RepoStatusActions } from '../repoStatusSlice';
 import type { IRepoStatusAction } from '../repoStatusSlice';
 import { fetchRepoStatus } from '../../../features/handleMergeConflict/handleMergeConflictSlice';
 import { repoStatusUrl } from '../../../utils/urlHelper';
-import postMessages from 'app-shared/utils/postMessages';
+import postMessages from 'altinn-shared/utils/postMessages';
 
 // GET MASTER REPO
 export function* resetLocalRepoSaga({
@@ -35,4 +35,3 @@ export function* resetLocalRepoSaga({
 export function* watchResetLocalRepoSaga(): SagaIterator {
   yield takeLatest(RepoStatusActions.resetLocalRepo, resetLocalRepoSaga);
 }
-

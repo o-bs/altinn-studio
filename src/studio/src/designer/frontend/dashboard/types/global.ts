@@ -1,5 +1,5 @@
-import type { IDataModellingState } from 'app-shared/features/dataModelling/sagas';
-import type { IDataModelsMetadataState } from 'app-shared/features/dataModelling/sagas/metadata';
+import type { IDataModellingState } from 'altinn-shared/features/dataModelling/sagas';
+import type { IDataModelsMetadataState } from 'altinn-shared/features/dataModelling/sagas/metadata';
 import type { IDashboardState } from '../resources/fetchDashboardResources/dashboardSlice';
 import type { IFetchedLanguageState } from '../resources/fetchLanguage/languageSlice';
 

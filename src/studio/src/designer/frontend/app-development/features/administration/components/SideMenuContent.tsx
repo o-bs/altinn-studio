@@ -1,14 +1,14 @@
 import React from 'react';
-import { getLanguageFromKey } from 'app-shared/utils/language';
+import { getLanguageFromKey } from 'altinn-shared/utils/language';
 import { makeStyles, Typography } from '@material-ui/core';
-import { formatNameAndDate } from 'app-shared/utils/formatDate';
-import AltinnButton from 'app-shared/components/AltinnButton';
+import { formatNameAndDate } from 'altinn-shared/utils/formatDate';
+import AltinnButton from 'altinn-shared/components/AltinnButton';
 import classNames from 'classnames';
 import type { ICommit, IRepository } from '../../../types/global';
 import ResetRepoModal from './ResetRepoModal';
 import { RepoStatusActions } from '../../../sharedResources/repoStatus/repoStatusSlice';
 import DownloadRepoModal from './DownloadRepoModal';
-import { useAppDispatch, useAppSelector } from 'common/hooks';
+import { useAppDispatch, useAppSelector } from '../../../common/hooks';
 
 const setupClasses = makeStyles({
   avatar: {

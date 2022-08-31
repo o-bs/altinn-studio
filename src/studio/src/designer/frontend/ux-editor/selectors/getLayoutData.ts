@@ -4,7 +4,8 @@ import type {
   IFormDesignerComponents,
   IFormLayoutOrder,
 } from '../types/global';
-import { createSelector, ParametricSelector } from 'reselect';
+import type { ParametricSelector } from 'reselect';
+import { createSelector } from 'reselect';
 
 const layoutOrderSelector = (state: IAppState) => {
   return state.formDesigner.layout.layouts[

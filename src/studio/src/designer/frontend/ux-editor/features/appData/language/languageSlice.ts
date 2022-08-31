@@ -1,5 +1,6 @@
-import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import fallbackLanguage from 'app-shared/fallbackLanguage';
+import type { PayloadAction } from '@reduxjs/toolkit';
+import { createSlice } from '@reduxjs/toolkit';
+import fallbackLanguage from 'altinn-shared/fallbackLanguage';
 import type { IFormDesignerActionRejected } from '../../../types/global';
 
 export interface ILanguageState {

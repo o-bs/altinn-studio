@@ -1,40 +1,28 @@
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const webpackRoot = require('../../webpack.frontend.js');
 
 module.exports = {
+  ...webpackRoot,
   entry: './src/index.ts',
   output: {
-    filename: 'index.js',
     path: path.resolve(__dirname, 'dist'),
-  },
-  resolve: {
-    extensions: [ '.tsx', '.ts', '.js' ],
-    alias: {
-      "app-shared": path.resolve(__dirname, "../../shared/")
-    }
+    filename: 'index.js',
   },
   module: {
+    ...webpackRoot.module,
     rules: [
+      ...webpackRoot.module.rules,
       {
         test: /\.tsx?$/,
         use: 'ts-loader',
         exclude: /node_modules/,
       },
-      {
-        test: /\.css$/,
-        use: [{
-            loader: MiniCssExtractPlugin.loader,
-          },
-          {
-            loader: "css-loader",
-          },
-        ]
-      },
     ],
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: "schemaEditor.css",
+      filename: 'schemaEditor.css',
     }),
-  ]
+  ],
 };

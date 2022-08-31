@@ -1,4 +1,5 @@
-import Axios, { AxiosRequestConfig, AxiosResponse } from 'axios';
+import type { AxiosRequestConfig, AxiosResponse } from 'axios';
+import Axios from 'axios';
 
 export async function get<ResponseType>(
   url: string,

@@ -1,10 +1,10 @@
 import React from 'react';
-import * as networking from 'app-shared/utils/networking';
+import * as networking from 'altinn-shared/utils/networking';
 
 import { HandleMergeConflictDiscardChanges } from './HandleMergeConflictDiscardChanges';
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import { ClassNameMap } from '@material-ui/core/styles/withStyles';
+import type { ClassNameMap } from '@material-ui/core/styles/withStyles';
 
 const consoleError = jest
   .spyOn(console, 'error')

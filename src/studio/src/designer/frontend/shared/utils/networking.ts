@@ -1,10 +1,11 @@
-import axios, { AxiosError, AxiosRequestConfig, AxiosResponse } from 'axios';
+import type { AxiosError, AxiosRequestConfig, AxiosResponse } from 'axios';
+import axios from 'axios';
 
-export async function get(url: string, options?: AxiosRequestConfig): Promise<any> {
-  const response: AxiosResponse = await axios.get(
-    url,
-    options || null,
-  );
+export async function get(
+  url: string,
+  options?: AxiosRequestConfig,
+): Promise<any> {
+  const response: AxiosResponse = await axios.get(url, options || null);
   return response.data ? response.data : null;
 }
 
@@ -13,7 +14,11 @@ export async function post(
   data?: any,
   options?: AxiosRequestConfig,
 ): Promise<void> {
-  const response: AxiosResponse = await axios.post(url, data || null, options || null);
+  const response: AxiosResponse = await axios.post(
+    url,
+    data || null,
+    options || null,
+  );
   return response.data ? response.data : null;
 }
 

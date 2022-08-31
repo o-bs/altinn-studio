@@ -1,8 +1,8 @@
-import { SagaIterator } from 'redux-saga';
+import type { SagaIterator } from 'redux-saga';
 import { call, put, takeLatest } from 'redux-saga/effects';
-import { get, post } from 'app-shared/utils/networking';
-import postMessages from 'app-shared/utils/postMessages';
-import { PayloadAction } from '@reduxjs/toolkit';
+import { get, post } from 'altinn-shared/utils/networking';
+import postMessages from 'altinn-shared/utils/postMessages';
+import type { PayloadAction } from '@reduxjs/toolkit';
 import { HandleServiceInformationActions } from './handleServiceInformationSlice';
 import type {
   IFetchInitialCommitAction,

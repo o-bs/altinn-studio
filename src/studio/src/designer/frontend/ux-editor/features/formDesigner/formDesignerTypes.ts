@@ -1,4 +1,4 @@
-import type { ILayoutSettings } from 'app-shared/types/global';
+import type { ILayoutSettings } from 'altinn-shared/types/global';
 import type {
   IFormComponent,
   IFormDesignerComponents,

@@ -4,7 +4,7 @@ import configureStore from 'redux-mock-store';
 import { render as rtlRender, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 
-import * as networking from 'app-shared/utils/networking';
+import * as networking from 'altinn-shared/utils/networking';
 import { MakeCopyModal } from 'common/components/MakeCopyModal';
 import type { IMakeCopyModalProps } from 'common/components/MakeCopyModal';
 

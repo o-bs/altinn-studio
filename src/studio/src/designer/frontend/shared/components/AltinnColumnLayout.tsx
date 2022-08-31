@@ -1,10 +1,10 @@
+import type { WithStyles } from '@material-ui/core';
 import {
   createTheme,
   createStyles,
   Grid,
   Typography,
   withStyles,
-  WithStyles,
 } from '@material-ui/core';
 import classNames from 'classnames';
 import React from 'react';
@@ -24,7 +24,7 @@ const styles = createStyles({
   },
   sidebar: {
     [theme.breakpoints.up('md')]: {
-      borderLeft: '1px solid ' + theme.altinnPalette.primary.greyMedium,
+      borderLeft: `1px solid ${theme.altinnPalette.primary.greyMedium}`,
       paddingLeft: 10,
     },
     [theme.breakpoints.down('sm')]: {

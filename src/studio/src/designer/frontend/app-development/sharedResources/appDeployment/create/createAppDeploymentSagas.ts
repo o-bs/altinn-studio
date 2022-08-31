@@ -1,7 +1,7 @@
-import { SagaIterator } from 'redux-saga';
+import type { SagaIterator } from 'redux-saga';
 import { call, put, takeLatest } from 'redux-saga/effects';
-import { post } from 'app-shared/utils/networking';
-import { PayloadAction } from '@reduxjs/toolkit';
+import { post } from 'altinn-shared/utils/networking';
+import type { PayloadAction } from '@reduxjs/toolkit';
 import { appDeploymentsUrl } from '../../../utils/urlHelper';
 import type { ICreateAppDeployment } from '../types';
 import { AppDeploymentActions } from '../appDeploymentSlice';
@@ -40,4 +40,3 @@ export function* watchCreateAppDeploymentSaga(): SagaIterator {
     createAppDeploymentSaga,
   );
 }
-

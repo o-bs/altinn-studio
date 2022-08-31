@@ -1,6 +1,6 @@
-import { SagaIterator } from 'redux-saga';
+import type { SagaIterator } from 'redux-saga';
 import { call, delay, put, select, takeLatest } from 'redux-saga/effects';
-import postMessages from 'app-shared/utils/postMessages';
+import postMessages from 'altinn-shared/utils/postMessages';
 import {
   addConditionalRenderingConnection,
   addRuleConnection,

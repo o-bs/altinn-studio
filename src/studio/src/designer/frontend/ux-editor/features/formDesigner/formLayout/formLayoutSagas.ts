@@ -1,4 +1,4 @@
-import { SagaIterator } from 'redux-saga';
+import type { SagaIterator } from 'redux-saga';
 import {
   call,
   delay,
@@ -7,12 +7,12 @@ import {
   takeEvery,
   takeLatest,
 } from 'redux-saga/effects';
-import * as SharedNetwork from 'app-shared/utils/networking';
-import postMessages from 'app-shared/utils/postMessages';
-import { ILayoutSettings } from 'app-shared/types/global';
+import * as SharedNetwork from 'altinn-shared/utils/networking';
+import postMessages from 'altinn-shared/utils/postMessages';
+import type { ILayoutSettings } from 'altinn-shared/types/global';
 import Axios from 'axios';
 import { v4 as uuidv4 } from 'uuid';
-import { PayloadAction } from '@reduxjs/toolkit';
+import type { PayloadAction } from '@reduxjs/toolkit';
 import {
   convertFromLayoutToInternalFormat,
   convertInternalToLayoutFormat,
@@ -31,7 +31,7 @@ import {
   getFetchFormLayoutUrl,
 } from '../../../utils/urlHelper';
 import { ComponentTypes } from '../../../components';
-import {
+import type {
   IAddApplicationMetadataAction,
   IAddFormComponentAction,
   IAddFormContainerAction,

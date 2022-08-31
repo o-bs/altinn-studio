@@ -1,10 +1,5 @@
-import {
-  createTheme,
-  createStyles,
-  Grid,
-  WithStyles,
-  withStyles,
-} from '@material-ui/core';
+import type { WithStyles } from '@material-ui/core';
+import { createTheme, createStyles, Grid, withStyles } from '@material-ui/core';
 import axios from 'axios';
 import React from 'react';
 import { get, post } from '../utils/networking';

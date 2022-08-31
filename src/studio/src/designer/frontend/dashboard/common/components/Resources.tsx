@@ -4,7 +4,7 @@ import { Typography } from '@material-ui/core';
 
 import { ResourceItem } from './ResourceItem';
 import { useAppSelector } from 'common/hooks';
-import { getLanguageFromKey } from 'app-shared/utils/language';
+import { getLanguageFromKey } from 'altinn-shared/utils/language';
 
 interface Resource {
   label: string;

@@ -1,6 +1,6 @@
 import React from 'react';
 import { screen } from '@testing-library/react';
-import { renderWithRedux } from '../../../test/renderWithRedux';
+import { renderWithRedux } from '../../../../../test/renderWithRedux';
 import { ItemRestrictionsTab } from './ItemRestrictionsTab';
 
 test('item restrictions require checkbox to work', async () => {

@@ -1,4 +1,4 @@
-import { NameInUseProps, UiSchemaItem } from '../types';
+import type { NameInUseProps, UiSchemaItem } from '../types';
 
 export const isValidName = (name: string) => {
   return Boolean(name.match(/^[a-zA-ZæÆøØåÅ][a-zA-Z0-9_.\-æÆøØåÅ ]*$/));

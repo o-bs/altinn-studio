@@ -1,8 +1,8 @@
-import { AxiosError } from 'axios';
-import { SagaIterator } from 'redux-saga';
+import type { AxiosError } from 'axios';
+import type { SagaIterator } from 'redux-saga';
 import { delay, call, put, takeLatest } from 'redux-saga/effects';
-import { checkIfAxiosError } from 'app-shared/utils/networking';
-import { PayloadAction } from '@reduxjs/toolkit';
+import { checkIfAxiosError } from 'altinn-shared/utils/networking';
+import type { PayloadAction } from '@reduxjs/toolkit';
 import { post } from '../../../utils/networking';
 import { releasesPostUrl } from '../../../utils/urlHelper';
 import { AppReleaseActions } from '../appReleaseSlice';
@@ -37,4 +37,3 @@ function* createReleaseSaga({
 export function* watchCreateReleaseSaga(): SagaIterator {
   yield takeLatest(AppReleaseActions.createAppRelease, createReleaseSaga);
 }
-

@@ -1,9 +1,9 @@
+import type { Theme } from '@material-ui/core';
 import {
   createTheme,
   Drawer,
   Grid,
   makeStyles,
-  Theme,
   Typography,
 } from '@material-ui/core';
 import classNames from 'classnames';
@@ -11,9 +11,9 @@ import React from 'react';
 import { DndProvider } from 'react-dnd';
 import { HTML5Backend } from 'react-dnd-html5-backend';
 import { useDispatch, useSelector } from 'react-redux';
-import FileEditor from 'app-shared/file-editor/FileEditor';
-import altinnTheme from 'app-shared/theme/altinnStudioTheme';
-import VersionControlHeader from 'app-shared/version-control/versionControlHeader';
+import FileEditor from 'altinn-shared/file-editor/FileEditor';
+import altinnTheme from 'altinn-shared/theme/altinnStudioTheme';
+import VersionControlHeader from 'altinn-shared/version-control/versionControlHeader';
 import RightMenu from '../components/rightMenu/RightMenu';
 import { filterDataModelForIntellisense } from '../utils/datamodel';
 import DesignView from './DesignView';

@@ -18,10 +18,10 @@ export const sharedUrls = () => {
     repositoryGitUrl: `${origin}/repos/${org}/${repo}.git`,
     repositoryUrl: `${origin}/repos/${org}/${repo}`,
     createDataModelUrl: `${dataModelsApi}/post`,
-    getDataModelUrl:
-      (pathToModelFile: string) => `${dataModelsApi}${pathToModelFile}`,
-    saveDataModelUrl:
-      (pathToModelFile: string) => `${dataModelsApi}?modelPath=${encodeURIComponent(pathToModelFile)}`,
+    getDataModelUrl: (pathToModelFile: string) =>
+      `${dataModelsApi}${pathToModelFile}`,
+    saveDataModelUrl: (pathToModelFile: string) =>
+      `${dataModelsApi}?modelPath=${encodeURIComponent(pathToModelFile)}`,
   };
 };
 

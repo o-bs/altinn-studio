@@ -1,13 +1,13 @@
 import { Grid, Typography, withStyles } from '@material-ui/core';
 import React from 'react';
 import { connect } from 'react-redux';
-import AltinnCheckBox from 'app-shared/components/AltinnCheckBox';
-import AltinnInputField from 'app-shared/components/AltinnInputField';
-import AltinnRadio from 'app-shared/components/AltinnRadio';
-import AltinnRadioGroup from 'app-shared/components/AltinnRadioGroup';
-import { getLanguageFromKey } from 'app-shared/utils/language';
+import AltinnCheckBox from 'altinn-shared/components/AltinnCheckBox';
+import AltinnInputField from 'altinn-shared/components/AltinnInputField';
+import AltinnRadio from 'altinn-shared/components/AltinnRadio';
+import AltinnRadioGroup from 'altinn-shared/components/AltinnRadioGroup';
+import { getLanguageFromKey } from 'altinn-shared/utils/language';
 import Select from 'react-select';
-import ErrorPopover from 'app-shared/components/ErrorPopover';
+import ErrorPopover from 'altinn-shared/components/ErrorPopover';
 import {
   makeGetLayoutComponentsSelector,
   makeGetLayoutContainersSelector,
@@ -29,7 +29,7 @@ import EditBoilerplate from './EditBoilerplate';
 import HeaderSizeSelectComponent from './HeaderSizeSelect';
 import { ComponentTypes } from '../index';
 import { FileUploadWithTagComponent } from './FileUploadWithTagComponent';
-import {
+import type {
   IFormFileUploaderWithTagComponent,
   FormComponentType,
   IDataModelFieldElement,

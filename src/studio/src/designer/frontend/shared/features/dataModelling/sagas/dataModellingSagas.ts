@@ -1,8 +1,9 @@
-import { SagaIterator } from 'redux-saga';
+import type { SagaIterator } from 'redux-saga';
 import { call, takeLatest, put } from 'redux-saga/effects';
 import type { ISchema } from '@altinn/schema-editor/types';
 import { get, put as networkPut, post, del } from '../../../utils/networking';
 import { sharedUrls } from '../../../utils/urlHelper';
+import type { IDataModelAction } from './dataModellingSlice';
 import {
   fetchDataModel,
   fetchDataModelFulfilled,
@@ -13,7 +14,6 @@ import {
   createDataModel,
   createDataModelFulfilled,
   createDataModelRejected,
-  IDataModelAction,
   deleteDataModel,
   deleteDataModelFulfilled,
   deleteDataModelRejected,

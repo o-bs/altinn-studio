@@ -1,4 +1,4 @@
-import { SagaIterator } from 'redux-saga';
+import type { SagaIterator } from 'redux-saga';
 import { call, put, takeLatest } from 'redux-saga/effects';
 import { get } from '../../../../../utils/networking';
 import { sharedUrls } from '../../../../../utils/urlHelper';

@@ -4,7 +4,7 @@ import { Provider } from 'react-redux';
 import { buildUISchema } from '../utils/schema';
 import { dataMock } from '../mockData';
 import { render, screen } from '@testing-library/react';
-import { ISchemaState } from '../types';
+import type { ISchemaState } from '../types';
 import userEvent from '@testing-library/user-event';
 import type { UserEvent } from '@testing-library/user-event/dist/types/setup/setup';
 import { SchemaEditor } from './SchemaEditor';

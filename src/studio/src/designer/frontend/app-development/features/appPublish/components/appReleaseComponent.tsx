@@ -1,24 +1,24 @@
+import type { WithStyles } from '@material-ui/core';
 import {
   CircularProgress,
   createStyles,
   Grid,
   Typography,
   withStyles,
-  WithStyles,
 } from '@material-ui/core';
 import Moment from 'moment';
 import React from 'react';
-import altinnTheme from 'app-shared/theme/altinnStudioTheme';
-import { getLanguageFromKey } from 'app-shared/utils/language';
+import altinnTheme from 'altinn-shared/theme/altinnStudioTheme';
+import { getLanguageFromKey } from 'altinn-shared/utils/language';
 import {
   BuildResult,
   BuildStatus,
-} from '../../../sharedResources/appRelease/types';
+} from '../..altinn-sharedResources/appRelease/types';
 import type {
   IAppReleaseErrors,
   IBuild,
   IRelease,
-} from '../../../sharedResources/appRelease/types';
+} from '../..altinn-sharedResources/appRelease/types';
 import {
   getGitCommitLink,
   getReleaseBuildPipelineLink,

@@ -8,12 +8,12 @@ import {
 } from '@material-ui/core';
 import React from 'react';
 import { connect } from 'react-redux';
-import AltinnRadio from 'app-shared/components/AltinnRadio';
-import AltinnRadioGroup from 'app-shared/components/AltinnRadioGroup';
-import altinnTheme from 'app-shared/theme/altinnStudioTheme';
-import AltinnInputField from 'app-shared/components/AltinnInputField';
-import { getLanguageFromKey } from 'app-shared/utils/language';
-import AltinnCheckBox from 'app-shared/components/AltinnCheckBox';
+import AltinnRadio from 'altinn-shared/components/AltinnRadio';
+import AltinnRadioGroup from 'altinn-shared/components/AltinnRadioGroup';
+import altinnTheme from 'altinn-shared/theme/altinnStudioTheme';
+import AltinnInputField from 'altinn-shared/components/AltinnInputField';
+import { getLanguageFromKey } from 'altinn-shared/utils/language';
+import AltinnCheckBox from 'altinn-shared/components/AltinnCheckBox';
 import {
   renderSelectDataModelBinding,
   renderSelectTextFromResources,
@@ -313,7 +313,12 @@ export class SelectionEditComponent extends React.Component<
                         />
                       </Grid>
                     </Grid>
-                    <Grid xs={1} container={true} direction='column' item={true}>
+                    <Grid
+                      xs={1}
+                      container={true}
+                      direction='column'
+                      item={true}
+                    >
                       <IconButton
                         type='button'
                         className={`${this.props.classes.formComponentsBtn} ${this.props.classes.specialBtn}`}

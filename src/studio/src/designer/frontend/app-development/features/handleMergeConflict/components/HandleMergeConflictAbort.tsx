@@ -1,9 +1,9 @@
 import React from 'react';
-import AltinnButton from 'app-shared/components/AltinnButton';
-import AltinnPopover from 'app-shared/components/AltinnPopover';
-import { getLanguageFromKey } from 'app-shared/utils/language';
-import { get } from 'app-shared/utils/networking';
-import postMessages from 'app-shared/utils/postMessages';
+import AltinnButton from 'altinn-shared/components/AltinnButton';
+import AltinnPopover from 'altinn-shared/components/AltinnPopover';
+import { getLanguageFromKey } from 'altinn-shared/utils/language';
+import { get } from 'altinn-shared/utils/networking';
+import postMessages from 'altinn-shared/utils/postMessages';
 import type { IAltinnWindow } from '../../../types/global';
 
 interface IHandleMergeConflictAbortProps {

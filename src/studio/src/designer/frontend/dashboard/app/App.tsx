@@ -5,31 +5,29 @@ import {
   StylesProvider,
 } from '@material-ui/core/styles';
 
-import {HashRouter as Router, Route, Routes} from 'react-router-dom';
-import AltinnSpinner from 'app-shared/components/AltinnSpinner';
-import { AltinnButton } from 'app-shared/components';
-import { post } from 'app-shared/utils/networking';
-import { getLanguageFromKey } from 'app-shared/utils/language';
-import {
-  DashboardActions,
-  SelectedContext,
-} from '../resources/fetchDashboardResources/dashboardSlice';
+import { HashRouter as Router, Route, Routes } from 'react-router-dom';
+import AltinnSpinner from 'altinn-shared/components/AltinnSpinner';
+import { AltinnButton } from 'altinn-shared/components';
+import { post } from 'altinn-shared/utils/networking';
+import { getLanguageFromKey } from 'altinn-shared/utils/language';
+import type { SelectedContext } from '../resources/fetchDashboardResources/dashboardSlice';
+import { DashboardActions } from '../resources/fetchDashboardResources/dashboardSlice';
 import { fetchLanguage } from '../resources/fetchLanguage/languageSlice';
 import Header, {
   HeaderContext,
   SelectedContextType,
-} from 'app-shared/navigation/main-header/Header';
-import type { IHeaderContext } from 'app-shared/navigation/main-header/Header';
+} from 'altinn-shared/navigation/main-header/Header';
+import type { IHeaderContext } from 'altinn-shared/navigation/main-header/Header';
 
-import { userHasAccessToSelectedContext } from 'common/utils';
-import { generateClassName, themeV4, themeV5 } from 'common/utils/muiUtils';
-import { useAppSelector, useAppDispatch } from 'common/hooks';
-import { CenterContainer } from 'common/components/CenterContainer';
-import { Footer } from 'common/components/Footer';
-import StandaloneDataModelling from 'features/standaloneDataModelling/DataModelling';
-import { useGetOrganizationsQuery } from 'services/organizationApi';
-import { Dashboard } from 'features/dashboard';
-import { CreateService } from 'features/createService/CreateService';
+import { userHasAccessToSelectedContext } from '../common/utils';
+import { generateClassName, themeV4, themeV5 } from '../common/utils/muiUtils';
+import { useAppSelector, useAppDispatch } from '../common/hooks';
+import { CenterContainer } from '../common/components/CenterContainer';
+import { Footer } from '../common/components/Footer';
+import StandaloneDataModelling from '../features/standaloneDataModelling/DataModelling';
+import { useGetOrganizationsQuery } from '../services/organizationApi';
+import { Dashboard } from '../features/dashboard';
+import { CreateService } from '../features/createService/CreateService';
 
 import './App.css';
 
@@ -116,13 +114,21 @@ export const App = () => {
               </HeaderContext.Provider>
               <Router>
                 <Routes>
-                  <Route path='/' element={<>
-                    <CenterContainer>
-                      <Dashboard />
-                    </CenterContainer>
-                    <Footer />
-                  </>} />
-                  <Route path='/datamodelling/:org/:repoName' element={<StandaloneDataModelling language={language} />} />
+                  <Route
+                    path='/'
+                    element={
+                      <>
+                        <CenterContainer>
+                          <Dashboard />
+                        </CenterContainer>
+                        <Footer />
+                      </>
+                    }
+                  />
+                  <Route
+                    path='/datamodelling/:org/:repoName'
+                    element={<StandaloneDataModelling language={language} />}
+                  />
                   <Route path='/new' element={<CreateService />} />
                 </Routes>
               </Router>
@@ -130,10 +136,7 @@ export const App = () => {
           ) : (
             <CenterContainer>
               <AltinnSpinner
-                spinnerText={getLanguageFromKey(
-                  'dashboard.loading',
-                  language,
-                )}
+                spinnerText={getLanguageFromKey('dashboard.loading', language)}
               />
               {showLogOutButton && (
                 <AltinnButton

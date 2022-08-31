@@ -1,5 +1,5 @@
-import { get } from 'app-shared/utils/networking';
-import { SagaIterator } from 'redux-saga';
+import { get } from 'altinn-shared/utils/networking';
+import type { SagaIterator } from 'redux-saga';
 import { all, call, put, select, take, takeLatest } from 'redux-saga/effects';
 import {
   fetchWidgets,

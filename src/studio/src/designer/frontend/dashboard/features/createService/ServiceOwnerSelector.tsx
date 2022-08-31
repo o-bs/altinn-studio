@@ -1,15 +1,15 @@
 import React from 'react';
 
-import { User } from '../../resources/fetchDashboardResources/dashboardSlice';
+import type { User } from '../../resources/fetchDashboardResources/dashboardSlice';
 
-import AltinnSpinner from 'app-shared/components/AltinnSpinner';
-import type { IGiteaOrganisation } from 'app-shared/types/global';
-import AltinnDropdown from 'app-shared/components/AltinnDropdown';
-import AltinnPopper from 'app-shared/components/AltinnPopper';
-import { getLanguageFromKey } from 'app-shared/utils/language';
-import { useGetOrganizationsQuery } from 'services/organizationApi';
+import AltinnSpinner from 'altinn-shared/components/AltinnSpinner';
+import type { IGiteaOrganisation } from 'altinn-shared/types/global';
+import AltinnDropdown from 'altinn-shared/components/AltinnDropdown';
+import AltinnPopper from 'altinn-shared/components/AltinnPopper';
+import { getLanguageFromKey } from 'altinn-shared/utils/language';
+import { useGetOrganizationsQuery } from '../../services/organizationApi';
 
-import { useAppSelector } from 'common/hooks';
+import { useAppSelector } from '../../common/hooks';
 
 const zIndex = {
   zIndex: 1300,

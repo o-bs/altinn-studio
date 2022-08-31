@@ -1,15 +1,14 @@
 /* eslint-disable react/no-find-dom-node */
 import React from 'react';
-import {
+import type {
   ConnectDragSource,
   ConnectDropTarget,
-  DragSource,
   DragSourceConnector,
   DragSourceMonitor,
-  DropTarget,
   DropTargetConnector,
   DropTargetMonitor,
 } from 'react-dnd';
+import { DragSource, DropTarget } from 'react-dnd';
 import { findDOMNode } from 'react-dom';
 
 const itemSource = {

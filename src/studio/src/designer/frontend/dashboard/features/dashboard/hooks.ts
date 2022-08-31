@@ -1,6 +1,7 @@
 import React from 'react';
-import { mergeRepos, MergeReposProps } from './utils';
-import type { IRepository } from 'app-shared/types/global';
+import type { MergeReposProps } from './utils';
+import { mergeRepos } from './utils';
+import type { IRepository } from 'altinn-shared/types/global';
 
 export const useAugmentReposWithStarred = ({
   repos,

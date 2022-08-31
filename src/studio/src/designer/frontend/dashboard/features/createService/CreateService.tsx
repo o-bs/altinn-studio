@@ -2,19 +2,19 @@ import { makeStyles } from '@material-ui/core/styles';
 import { Grid } from '@material-ui/core';
 import React from 'react';
 
-import { useAppSelector } from 'common/hooks';
+import { useAppSelector } from '../../common/hooks';
 
-import AltinnButton from 'app-shared/components/AltinnButton';
-import AltinnSpinner from 'app-shared/components/AltinnSpinner';
-import { getLanguageFromKey } from 'app-shared/utils/language';
+import AltinnButton from 'altinn-shared/components/AltinnButton';
+import AltinnSpinner from 'altinn-shared/components/AltinnSpinner';
+import { getLanguageFromKey } from 'altinn-shared/utils/language';
 
 import { ServiceOwnerSelector } from './ServiceOwnerSelector';
 import { RepoNameInput } from './RepoNameInput';
 // import { RepoTypeSelector } from './RepoTypeSelector';
-import { useAddRepoMutation, DataModellingFormat } from 'services/repoApi';
+import { useAddRepoMutation, DataModellingFormat } from '../../services/repoApi';
 
-import { validateRepoName } from 'common/utils';
-import { applicationAboutPage } from 'common/utils/urlUtils';
+import { validateRepoName } from '../../common/utils';
+import { applicationAboutPage } from '../../common/utils/urlUtils';
 
 const useStyles = makeStyles({
   button: {

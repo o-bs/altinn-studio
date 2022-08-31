@@ -1,10 +1,10 @@
+import type { WithStyles } from '@material-ui/core';
 import {
   Button,
   createTheme,
   createStyles,
   Grid,
   Typography,
-  WithStyles,
   withStyles,
 } from '@material-ui/core';
 import React from 'react';

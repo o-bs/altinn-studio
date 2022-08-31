@@ -1,14 +1,16 @@
 import React from 'react';
 import configureStore from 'redux-mock-store';
-import {
-  AccessControlContainerClass,
+import type {
   IAccessControlContainerProps,
   IAccessControlContainerState,
+} from './AccessControlContainer';
+import {
+  AccessControlContainerClass,
   PartyTypes,
 } from './AccessControlContainer';
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import * as networking from 'app-shared/utils/networking';
+import * as networking from 'altinn-shared/utils/networking';
 const newApplicationMetadata: any = {
   // must be opposite of currentApplicationMetadata.partyTypesAllowed
   partyTypesAllowed: {
@@ -144,7 +146,7 @@ test('should correctly update partyTypesAllowed state when handlePartyTypesAllow
   // Checking that initial state get set correct
   partyTypes.forEach((partyType) => {
     const checkbox = screen.getByRole('checkbox', {
-      name: 'access_control.' + partyType,
+      name: `access_control.${partyType}`,
     });
     expect(checkbox.hasAttribute('checked')).toBe(
       initialPartyTypesAllowed[partyType],
@@ -155,7 +157,7 @@ test('should correctly update partyTypesAllowed state when handlePartyTypesAllow
   while (partyTypes[partyTypeIndex]) {
     await user.click(
       screen.getByRole('checkbox', {
-        name: 'access_control.' + partyTypes[partyTypeIndex],
+        name: `access_control.${partyTypes[partyTypeIndex]}`,
       }),
     );
     partyTypeIndex++;
@@ -176,7 +178,7 @@ test('constructor should initiate partyTypesAllowed with empty values if passed 
   Object.keys(PartyTypes).forEach((partyType) => {
     expect(
       screen.getByRole('checkbox', {
-        name: 'access_control.' + partyType,
+        name: `access_control.${partyType}`,
       }),
     ).not.toBeChecked();
   });

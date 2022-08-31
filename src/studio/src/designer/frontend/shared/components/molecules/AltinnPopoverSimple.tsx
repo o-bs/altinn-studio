@@ -5,7 +5,8 @@ import {
   Grid,
   makeStyles,
 } from '@material-ui/core';
-import Popover, { PopoverOrigin } from '@material-ui/core/Popover';
+import type { PopoverOrigin } from '@material-ui/core/Popover';
+import Popover from '@material-ui/core/Popover';
 import React from 'react';
 import altinnTheme from '../../theme/altinnStudioTheme';
 

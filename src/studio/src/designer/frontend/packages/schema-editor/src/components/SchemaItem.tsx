@@ -1,6 +1,7 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import TreeItem, { TreeItemProps } from '@material-ui/lab/TreeItem';
+import type { TreeItemProps } from '@material-ui/lab/TreeItem';
+import TreeItem from '@material-ui/lab/TreeItem';
 import { useDispatch, useSelector } from 'react-redux';
 import {
   addCombinationItem,

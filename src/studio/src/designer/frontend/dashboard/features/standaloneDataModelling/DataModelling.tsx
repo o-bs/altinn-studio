@@ -1,8 +1,8 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import { DataModelling } from 'app-shared/features';
+import { DataModelling } from 'altinn-shared/features';
 import { connect } from 'react-redux';
-import { DataModelsMetadataActions } from 'app-shared/features/dataModelling/sagas/metadata';
+import { DataModelsMetadataActions } from 'altinn-shared/features/dataModelling/sagas/metadata';
 import { createStyles, Grid, withStyles } from '@material-ui/core';
 import { useAppDispatch } from 'common/hooks';
 import type { IDashboardAppState } from '../../types/global';
@@ -26,7 +26,7 @@ const DataModellingContainer = ({
   dispatch(DataModelsMetadataActions.getDataModelsMetadata());
 
   const { org, repoName } = useParams(); // check if this works after upgrade to router 6
-  if( org && repoName) {
+  if (org && repoName) {
     return (
       <Grid item className={classes.containerGrid}>
         <DataModelling
@@ -38,7 +38,7 @@ const DataModellingContainer = ({
       </Grid>
     );
   }
-  return <p>Either organization/repository-name was undefined</p>
+  return <p>Either organization/repository-name was undefined</p>;
 };
 
 const mapStateToProps = (

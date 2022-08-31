@@ -7,10 +7,10 @@ import {
 } from '@material-ui/core';
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import altinnTheme from '../../../shared/theme/altinnStudioTheme';
+import altinnTheme from 'altinn-shared/theme/altinnStudioTheme';
 import RuleModal from '../toolbar/RuleModal';
 import ConditionalRenderingModal from '../toolbar/ConditionalRenderingModal';
-import { getLanguageFromKey } from '../../../shared/utils/language';
+import { getLanguageFromKey } from 'altinn-shared/utils/language';
 import PagesContainer from './pages/PagesContainer';
 import { FormLayoutActions } from '../../features/formDesigner/formLayout/formLayoutSlice';
 import type { LogicMode, IAppState } from '../../types/global';

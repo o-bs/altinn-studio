@@ -1,8 +1,8 @@
 import React from 'react';
 import { screen } from '@testing-library/react';
 import { ItemPropertiesTab } from './ItemPropertiesTab';
-import { UiSchemaItem } from '../../types';
-import { renderWithRedux } from '../../../test/renderWithRedux';
+import type { UiSchemaItem } from '../../types';
+import { renderWithRedux } from '../../../../../test/renderWithRedux';
 
 test('item property tab renders combinations', async () => {
   const checkIsNameInUse = jest.fn();

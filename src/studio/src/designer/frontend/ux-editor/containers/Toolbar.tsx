@@ -5,19 +5,16 @@ import {
   mapComponentToToolbarElement,
   mapWidgetToToolbarElement,
 } from '../utils/formLayout';
+import type { ComponentTypes } from '../components';
 import {
   advancedComponents,
-  ComponentTypes,
   schemaComponents,
   textComponents,
 } from '../components';
 import { InformationPanelComponent } from '../components/toolbar/InformationPanelComponent';
 import { makeGetLayoutOrderSelector } from '../selectors/getLayoutData';
 import { ToolbarGroup } from './ToolbarGroup';
-import type {
-  IAppState,
-  IWidget,
-} from '../types/global';
+import type { IAppState, IWidget } from '../types/global';
 
 import './ToolBar.css';
 

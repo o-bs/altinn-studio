@@ -1,11 +1,7 @@
-import {
-  applyMiddleware,
-  compose,
-  createStore,
-  Middleware,
-  Store,
-} from 'redux';
-import createSagaMiddleware, { SagaMiddleware } from 'redux-saga';
+import type { Middleware, Store } from 'redux';
+import { applyMiddleware, compose, createStore } from 'redux';
+import type { SagaMiddleware } from 'redux-saga';
+import createSagaMiddleware from 'redux-saga';
 import reducers from './reducers';
 import type { IAppState } from './types/global';
 

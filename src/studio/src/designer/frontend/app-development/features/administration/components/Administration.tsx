@@ -1,14 +1,14 @@
 import { createTheme, Grid, makeStyles } from '@material-ui/core';
 import React from 'react';
-import AltinnColumnLayout from 'app-shared/components/AltinnColumnLayout';
-import AltinnSpinner from 'app-shared/components/AltinnSpinner';
-import altinnTheme from 'app-shared/theme/altinnStudioTheme';
-import { getLanguageFromKey } from 'app-shared/utils/language';
-import VersionControlHeader from 'app-shared/version-control/versionControlHeader';
+import AltinnColumnLayout from 'altinn-shared/components/AltinnColumnLayout';
+import AltinnSpinner from 'altinn-shared/components/AltinnSpinner';
+import altinnTheme from 'altinn-shared/theme/altinnStudioTheme';
+import { getLanguageFromKey } from 'altinn-shared/utils/language';
+import VersionControlHeader from 'altinn-shared/version-control/versionControlHeader';
 import { HandleServiceInformationActions } from '../handleServiceInformationSlice';
 import MainContent from './MainContent';
 import SideMenuContent from './SideMenuContent';
-import { useAppDispatch, useAppSelector } from 'common/hooks';
+import { useAppDispatch, useAppSelector } from '../../../common/hooks';
 import type { IAltinnWindow } from '../../../types/global';
 
 const theme = createTheme(altinnTheme);

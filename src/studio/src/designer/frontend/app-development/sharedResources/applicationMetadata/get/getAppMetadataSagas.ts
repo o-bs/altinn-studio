@@ -1,6 +1,6 @@
-import { SagaIterator } from 'redux-saga';
+import type { SagaIterator } from 'redux-saga';
 import { call, put, takeLatest } from 'redux-saga/effects';
-import { get, post } from 'app-shared/utils/networking';
+import { get, post } from 'altinn-shared/utils/networking';
 import { applicationMetadataUrl } from '../../../utils/urlHelper';
 import { ApplicationMetadataActions } from '../applicationMetadataSlice';
 

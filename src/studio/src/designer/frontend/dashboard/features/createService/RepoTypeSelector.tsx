@@ -2,13 +2,13 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Typography } from '@material-ui/core';
 
-import AltinnInformationPaper from 'app-shared/components/AltinnInformationPaper';
-import { AltinnRadioGroup } from 'app-shared/components/AltinnRadioGroup';
-import { AltinnRadio } from 'app-shared/components/AltinnRadio';
-import { getLanguageFromKey } from 'app-shared/utils/language';
+import AltinnInformationPaper from 'altinn-shared/components/AltinnInformationPaper';
+import { AltinnRadioGroup } from 'altinn-shared/components/AltinnRadioGroup';
+import { AltinnRadio } from 'altinn-shared/components/AltinnRadio';
+import { getLanguageFromKey } from 'altinn-shared/utils/language';
 
-import { useAppSelector } from 'common/hooks';
-import { DataModellingFormat } from 'services/repoApi';
+import { useAppSelector } from '../../common/hooks';
+import { DataModellingFormat } from '../../services/repoApi';
 
 interface IRepoTypeSelectorProps {
   selectedFormat: DataModellingFormat;

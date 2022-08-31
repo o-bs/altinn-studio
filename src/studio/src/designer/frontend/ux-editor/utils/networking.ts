@@ -1,5 +1,5 @@
-import axios, { AxiosRequestConfig, AxiosResponse } from 'axios';
-
+import type { AxiosRequestConfig, AxiosResponse } from 'axios';
+import axios from 'axios';
 
 export async function get(url: string, options?: any): Promise<any> {
   try {
@@ -47,4 +47,3 @@ export async function deleteCall(url: string): Promise<any> {
   const response: AxiosResponse = await axios.delete(url);
   return response?.data;
 }
-

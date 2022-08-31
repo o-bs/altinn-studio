@@ -1,10 +1,10 @@
 import React from 'react';
 
 import { makeStyles } from '@material-ui/core';
-import AltinnInformationPaper from 'app-shared/components/AltinnInformationPaper';
-import AltinnInputField from 'app-shared/components/AltinnInputField';
-import AltinnPopper from 'app-shared/components/AltinnPopper';
-import { getLanguageFromKey } from 'app-shared/utils/language';
+import AltinnInformationPaper from 'altinn-shared/components/AltinnInformationPaper';
+import AltinnInputField from 'altinn-shared/components/AltinnInputField';
+import AltinnPopper from 'altinn-shared/components/AltinnPopper';
+import { getLanguageFromKey } from 'altinn-shared/utils/language';
 import { useAppSelector } from 'common/hooks';
 
 const zIndex = {

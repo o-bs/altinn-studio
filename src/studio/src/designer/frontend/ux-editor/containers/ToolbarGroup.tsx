@@ -2,11 +2,10 @@ import React from 'react';
 import { Collapse, makeStyles } from '@material-ui/core';
 import List from '@material-ui/core/List';
 import { getComponentTitleByComponentType } from '../utils/language';
-import { ComponentTypes } from '../components';
+import type { ComponentTypes } from '../components';
 import { CollapsableMenuComponent } from '../components/toolbar/CollapsableMenuComponent';
 import { ToolbarItem } from './ToolbarItem';
-import { CollapsableMenus } from './Toolbar';
-import type { IToolbarElement } from './Toolbar';
+import type { CollapsableMenus, IToolbarElement } from './Toolbar';
 
 export interface IToolbarGroupProps {
   list: string;

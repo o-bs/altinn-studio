@@ -4,7 +4,7 @@ import {
 } from '@material-ui/core/styles';
 import { createTheme as createThemeV5 } from '@mui/material/styles';
 
-import altinnTheme from 'app-shared/theme/altinnStudioTheme';
+import altinnTheme from 'altinn-shared/theme/altinnStudioTheme';
 
 export const generateClassName = createGenerateClassName({
   // By enabling this option, if you have non-MUI elements (e.g. `<div />`)

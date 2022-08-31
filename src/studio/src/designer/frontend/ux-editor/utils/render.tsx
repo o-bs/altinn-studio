@@ -1,7 +1,7 @@
 import { Typography } from '@material-ui/core';
 import React from 'react';
 import Select from 'react-select';
-import { SelectDataModelComponent } from '../components/config/SelectDataModelComponent';
+import SelectDataModelComponent from '../components/config/SelectDataModelComponent';
 import { getTextResource, truncate } from './language';
 import type { ITextResource, IDataModelBindings } from '../types/global';
 

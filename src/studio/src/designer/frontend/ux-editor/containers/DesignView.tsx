@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { Dispatch } from 'redux';
+import type { Dispatch } from 'redux';
 import { makeGetLayoutOrderSelector } from '../selectors/getLayoutData';
 import { Container } from './Container';
 import DroppableDraggableContainer from './DroppableDraggableContainer';
