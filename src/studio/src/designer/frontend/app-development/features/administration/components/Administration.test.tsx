@@ -2,7 +2,7 @@ import React from 'react';
 import { fireEvent, screen, waitFor } from '@testing-library/react';
 import { Administration } from './Administration';
 import { renderWithProviders } from 'test/testUtils';
-import type { ICommit, IRepository } from '../../../types/global';
+import { AltinnRepositoryType, ICommit, IRepository } from '../../../types/global';
 import type { IHandleServiceInformationState } from 'features/administration/handleServiceInformationSlice';
 
 describe('Administration', () => {
@@ -65,6 +65,7 @@ describe('Administration', () => {
   const mockServiceInformation: IHandleServiceInformationState = {
     initialCommit: mockInitialCommit,
     repositoryInfo: mockService,
+    repositorySettings: { repoType: AltinnRepositoryType.App },
     serviceDescriptionObj: {
       description: mockServiceDescription,
       saving: false,

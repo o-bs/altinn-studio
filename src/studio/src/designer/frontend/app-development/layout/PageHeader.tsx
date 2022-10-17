@@ -4,14 +4,15 @@ import React from 'react';
 import {Route, Routes} from 'react-router-dom';
 import routes from '../config/routes';
 import appDevelopmentLeftDrawerSettings from '../config/subPathSettings';
-import type {IAltinnWindow} from '../types/global';
+import type {AltinnRepositoryType, IAltinnWindow} from '../types/global';
 
 interface IPageHeaderProps {
   repoStatus: any;
+  repoType: AltinnRepositoryType;
 }
 
 const PageHeader = (ownProps: IPageHeaderProps) => {
-  const {repoStatus} = ownProps;
+  const {repoStatus, repoType} = ownProps;
   const {app, org} = window as Window as IAltinnWindow;
   return (
     <Routes>
@@ -25,6 +26,7 @@ const PageHeader = (ownProps: IPageHeaderProps) => {
               org={org}
               app={app}
               showSubMenu={!repoStatus.hasMergeConflict}
+              repoType={repoType}
               mainMenuItems={[
                 {
                   displayText: 'Om',

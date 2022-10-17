@@ -19,6 +19,8 @@ export const releasesGetUrl = `${releasesPostUrl}?sortDirection=Descending`;
 export const orgsListUrl = `${cdn}/orgs/altinn-orgs.json`;
 export const environmentsConfigUrl = `${cdn}/config/environments.json`;
 export const applicationMetadataUrl = `${origin}/designer/api/v1/${org}/${app}`;
+export const repoSettingsUrl = `${origin}/designer/${org}/${app}/ServiceDevelopment/GetRepoSettings`;
+
 
 export const getReleaseBuildPipelineLink = (buildId: string) =>
   `https://dev.azure.com/brreg/altinn-studio/_build/results?buildId=${buildId}`;

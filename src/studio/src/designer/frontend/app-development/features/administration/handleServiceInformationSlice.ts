@@ -2,6 +2,7 @@ import { createAction, createSlice, PayloadAction } from '@reduxjs/toolkit';
 import type {
   ICommit,
   IRepository,
+  IRepositorySettings,
   IServiceDescription,
   IServiceId,
   IServiceName,
@@ -24,6 +25,7 @@ import type {
 
 export interface IHandleServiceInformationState {
   repositoryInfo: IRepository;
+  repositorySettings: IRepositorySettings;
   serviceNameObj: IServiceName;
   serviceDescriptionObj: IServiceDescription;
   serviceIdObj: IServiceId;
@@ -33,6 +35,7 @@ export interface IHandleServiceInformationState {
 
 const initialState: IHandleServiceInformationState = {
   repositoryInfo: null,
+  repositorySettings: null,
   serviceNameObj: {
     name: '',
     saving: false,
@@ -64,6 +67,20 @@ const handleServiceInformationSlice = createSlice({
     fetchInitialCommitRejected: (
       state,
       action: PayloadAction<IHandleServiceInformationActionRejected>,
+    ) => {
+      const { error } = action.payload;
+      state.error = error;
+    },
+    fetchRepositorySettingsFulfilled: (
+      state,
+      action: PayloadAction<{repositorySettings: IRepositorySettings}>
+    ) => {
+      const { repositorySettings } = action.payload;
+      state.repositorySettings = repositorySettings;
+    },
+    fetchRepositorySettingsRejected: (
+      state,
+      action: PayloadAction<{error: Error}>
     ) => {
       const { error } = action.payload;
       state.error = error;
@@ -174,6 +191,7 @@ const actions = {
   fetchInitialCommit: createAction<IFetchInitialCommitAction>(
     `${moduleName}/fetchInitialCommit`,
   ),
+  fetchRepositorySettings: createAction(`${moduleName}/fetchRepositorySettings`),
 };
 
 export const HandleServiceInformationActions = {

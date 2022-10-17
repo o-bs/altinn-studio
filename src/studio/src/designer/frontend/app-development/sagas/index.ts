@@ -4,6 +4,7 @@ import { dataModellingSagas } from 'app-shared/features/dataModelling/sagas';
 
 import {
   watchHandleFetchInitialCommitSaga,
+  watchHandleFetchRepositorySettings,
   watchHandleFetchServiceConfigSaga,
   watchHandleFetchServiceNameSaga,
   watchHandleFetchServiceSaga,
@@ -25,6 +26,7 @@ function* root(): SagaIterator {
   yield fork(watchHandleMergeConflictSaga);
   yield fork(watchHandleFetchServiceSaga);
   yield fork(watchHandleFetchServiceNameSaga);
+  yield fork(watchHandleFetchRepositorySettings);
   yield fork(watchHandleSaveServiceNameSaga);
   yield fork(watchHandleFetchInitialCommitSaga);
   yield fork(watchHandleFetchServiceConfigSaga);

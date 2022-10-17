@@ -12,6 +12,8 @@ import type {
   ISaveServiceConfigAction,
   ISaveServiceNameAction,
 } from './types';
+import { repoSettingsUrl } from '../../utils/urlHelper';
+import { IRepositorySettings } from 'types/global';
 
 export function* handleFetchServiceSaga({
   payload: { url },
@@ -33,6 +35,22 @@ export function* watchHandleFetchServiceSaga(): SagaIterator {
   yield takeLatest(
     HandleServiceInformationActions.fetchService,
     handleFetchServiceSaga,
+  );
+}
+
+export function* handleFetchRepositorySettingsSaga() {
+  try {
+    const repositorySettings: IRepositorySettings = yield call(get, repoSettingsUrl);
+    yield put(HandleServiceInformationActions.fetchRepositorySettingsFulfilled({ repositorySettings}));
+  } catch (error) {
+    yield put(HandleServiceInformationActions.fetchRepositorySettingsRejected({ error }));
+  }
+}
+
+export function* watchHandleFetchRepositorySettings() {
+  yield takeLatest(
+    HandleServiceInformationActions.fetchRepositorySettings,
+    handleFetchRepositorySettingsSaga
   );
 }
 

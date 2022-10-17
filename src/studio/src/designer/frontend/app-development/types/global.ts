@@ -25,6 +25,16 @@ export interface IRepository {
   website: string;
 }
 
+export interface IRepositorySettings {
+  repoType: AltinnRepositoryType;
+}
+
+export enum AltinnRepositoryType {
+  Unknown = 'Unknown',
+  App = 'App',
+  Datamodels = 'Datamodels',
+}
+
 export interface IOwner {
   avatar_url: string;
   email: string;

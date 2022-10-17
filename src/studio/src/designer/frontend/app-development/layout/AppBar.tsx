@@ -14,6 +14,7 @@ import { menu } from './appBarConfig';
 import ProfileMenu from 'app-shared/navigation/main-header/profileMenu';
 import { useAppSelector } from 'common/hooks';
 import { getLanguageFromKey } from 'app-shared/utils/language';
+import { AltinnRepositoryType } from 'types/global';
 
 export interface IAppBarProps {
   activeSubHeaderSelection?: string;
@@ -25,6 +26,7 @@ export interface IAppBarProps {
   showSubMenu?: boolean;
   mainMenuItems?: IMenuItem[];
   subMenuItems?: { [key: string]: IMenuItem[] };
+  repoType: AltinnRepositoryType;
 }
 export interface IAppBarComponentState {
   anchorEl?: any;
@@ -102,6 +104,10 @@ const styles = (theme: Theme) =>
 
 const useStyles = makeStyles(styles);
 
+const filterMenu = (repoType: AltinnRepositoryType) => {
+  return menu.filter((item) => item.repoTypes?.includes(repoType));
+}
+
 export const AppBar = ({
   activeLeftMenuSelection,
   activeSubHeaderSelection,
@@ -112,6 +118,7 @@ export const AppBar = ({
   mainMenuItems,
   subMenuItems,
   showSubMenu,
+  repoType,
 }: IAppBarProps) => {
   const classes = useStyles();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -128,6 +135,8 @@ export const AppBar = ({
   const handleDrawerMenuClick = () => {
     setIsMenuOpen((prev) => !prev);
   };
+
+  const useMenu = filterMenu(repoType);
 
   return (
     <div className={classes.root}>
@@ -208,7 +217,7 @@ export const AppBar = ({
                   justifyContent='center'
                   alignItems='center'
                 >
-                  {menu.map((item) => (
+                  {useMenu.map((item) => (
                     <Grid
                       item
                       key={item.key}

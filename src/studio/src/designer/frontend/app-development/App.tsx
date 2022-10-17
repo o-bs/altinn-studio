@@ -24,7 +24,7 @@ import {
 import LeftMenu from './layout/LeftMenu';
 import PageHeader from './layout/PageHeader';
 import {useAppDispatch, useAppSelector} from 'common/hooks';
-import type {IAltinnWindow} from './types/global';
+import {AltinnRepositoryType, IAltinnWindow} from './types/global';
 
 import './App.css';
 
@@ -59,6 +59,7 @@ const TEN_MINUTE_IN_MILLISECONDS = 60000 * 10;
 export function App() {
   const language = useAppSelector((state) => state.languageState.language);
   const repoStatus = useAppSelector(GetRepoStatusSelector);
+  const repoSettings = useAppSelector((state) => state.serviceInformation.repositorySettings);
   const remainingSessionMinutes = useAppSelector(
     (state) => state.userState.session.remainingMinutes,
   );
@@ -69,36 +70,46 @@ export function App() {
 
   React.useEffect(() => {
     const {org, app} = window as Window as IAltinnWindow;
-    dispatch(
-      fetchLanguage({
-        url: `${window.location.origin}/designerapi/Language/GetLanguageAsJSON`,
-        languageCode: 'nb',
-      }),
-    );
-    dispatch(
-      HandleServiceInformationActions.fetchServiceName({
-        url: `${window.location.origin}/designer/${org}/${app}/Text/GetServiceName`,
-      }),
-    );
-    dispatch(ApplicationMetadataActions.getApplicationMetadata());
-    dispatch(DataModelsMetadataActions.getDataModelsMetadata());
-    dispatch(fetchRemainingSession());
-    dispatch(
-      HandleServiceInformationActions.fetchService({
-        url: `${window.location.origin}/designer/api/v1/repos/${org}/${app}`,
-      }),
-    );
-    dispatch(
-      HandleServiceInformationActions.fetchInitialCommit({
-        url: `${window.location.origin}/designer/api/v1/repos/${org}/${app}/initialcommit`,
-      }),
-    );
-    dispatch(
-      HandleServiceInformationActions.fetchServiceConfig({
-        url: `${window.location.origin}/designer/${org}/${app}/Config/GetServiceConfig`,
-      }),
-    );
-  }, [dispatch]);
+    if (!repoSettings) {
+      dispatch(HandleServiceInformationActions.fetchRepositorySettings());
+    } else {
+      dispatch(
+        fetchLanguage({
+          url: `${window.location.origin}/designerapi/Language/GetLanguageAsJSON`,
+          languageCode: 'nb',
+        }),
+      );
+      dispatch(
+        HandleServiceInformationActions.fetchInitialCommit({
+          url: `${window.location.origin}/designer/api/v1/repos/${org}/${app}/initialcommit`,
+        }),
+      );
+      dispatch(DataModelsMetadataActions.getDataModelsMetadata());
+      if (repoSettings && repoSettings.repoType === AltinnRepositoryType.App) {
+        dispatch(
+          HandleServiceInformationActions.fetchServiceName({
+            url: `${window.location.origin}/designer/${org}/${app}/Text/GetServiceName`,
+          }),
+        );
+        dispatch(ApplicationMetadataActions.getApplicationMetadata());
+        dispatch(fetchRemainingSession());
+        dispatch(
+          HandleServiceInformationActions.fetchService({
+            url: `${window.location.origin}/designer/api/v1/repos/${org}/${app}`,
+          }),
+        );
+
+        dispatch(
+          HandleServiceInformationActions.fetchServiceConfig({
+            url: `${window.location.origin}/designer/${org}/${app}/Config/GetServiceConfig`,
+          }),
+        );
+      }
+    }
+
+
+
+  }, [dispatch, repoSettings]);
 
   React.useEffect(() => {
     const setEventListeners = (subscribe: boolean) => {
@@ -185,7 +196,7 @@ export function App() {
           </Typography>
         </AltinnPopoverSimple>
         <Grid container={true} direction='row'>
-          <PageHeader repoStatus={repoStatus}/>
+          <PageHeader repoStatus={repoStatus} repoType={repoSettings?.repoType}/>
           <LeftMenu
             repoStatus={repoStatus}
             classes={classes}

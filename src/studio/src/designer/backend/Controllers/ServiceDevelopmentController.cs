@@ -4,6 +4,7 @@ using System.IO;
 using System.Net;
 using System.Net.Http;
 using System.Text;
+using System.Threading.Tasks;
 using Altinn.Studio.Designer.Enums;
 using Altinn.Studio.Designer.Helpers;
 using Altinn.Studio.Designer.Models;
@@ -22,17 +23,24 @@ namespace Altinn.Studio.Designer.Controllers
     {
         private readonly IRepository _repository;
         private readonly ISourceControl _sourceControl;
+        private readonly IAltinnGitRepositoryFactory _altinnGitRepositoryFactory;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="ServiceDevelopmentController"/> class.
         /// </summary>
         /// <param name="repositoryService">The service repository service.</param>
         /// <param name="sourceControl">The source control service.</param>
+        /// <param name="altinnGitRepositoryFactory">
+        /// Factory class that knows how to create types of <see cref="AltinnGitRepository"/>
+        /// </param>
         public ServiceDevelopmentController(
-            IRepository repositoryService, ISourceControl sourceControl)
+            IRepository repositoryService,
+            ISourceControl sourceControl,
+            IAltinnGitRepositoryFactory altinnGitRepositoryFactory)
         {
             _repository = repositoryService;
             _sourceControl = sourceControl;
+            _altinnGitRepositoryFactory = altinnGitRepositoryFactory;
         }
 
         /// <summary>
@@ -110,6 +118,21 @@ namespace Altinn.Studio.Designer.Controllers
             }
 
             return Content(file, "text/plain", Encoding.UTF8);
+        }
+
+        /// <summary>
+        /// Gets the repository settings for a specified repository.
+        /// </summary>
+        /// <param name="org">Unique identifier of the organisation responsible for the app.</param>
+        /// <param name="app">Application identifier which is unique within an organisation.</param>
+        /// <returns>The repository settings</returns>
+        [HttpGet]
+        public async Task<ActionResult<string>> GetRepoSettings(string org, string app)
+        {
+            var developer = AuthenticationHelper.GetDeveloperUserName(HttpContext);
+            var altinnGitRepository = _altinnGitRepositoryFactory.GetAltinnGitRepository(org, app, developer);
+            var result = await altinnGitRepository.GetAltinnStudioSettings();
+            return Ok(result);
         }
 
         /// <summary>
@@ -218,7 +241,7 @@ namespace Altinn.Studio.Designer.Controllers
             var fileList = new StringBuilder();
             foreach (AltinnCoreFile file in files)
             {
-                fileList.Append(file.FileName + ",");                
+                fileList.Append(file.FileName + ",");
             }
 
             return fileList.ToString().Substring(0, fileList.Length - 1);
