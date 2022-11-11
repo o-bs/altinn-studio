@@ -375,8 +375,9 @@ void CreateDirectory(IConfiguration configuration)
 
     // TODO: Figure out how appsettings.json parses values and merges with environment variables and use these here.
     // Since ":" is not valid in environment variables names in kubernetes, we can't use current docker-compose environment variables
-    string repoLocation = Environment.GetEnvironmentVariable("ServiceRepositorySettings__RepositoryLocation") ??
-                         configuration["ServiceRepositorySettings:RepositoryLocation"];
+
+    string repoLocation = Environment.GetEnvironmentVariable("ServiceRepositorySettings__RepositoryLocation") ?? Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/Altinn/Repos/" ?? configuration["ServiceRepositorySettings:RepositoryLocation"];
+    Console.WriteLine(repoLocation);
 
     if (!Directory.Exists(repoLocation))
     {
