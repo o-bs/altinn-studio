@@ -194,6 +194,18 @@ namespace LocalTest.Controllers
             return await Task.FromResult(Ok(token));
         }
 
+              /// <summary>
+        /// Returns a org token with the given org as claim
+        /// </summary>
+        /// <returns></returns>
+        public ActionResult GetTestAccessToken([FromQuery] string issuer, [FromQuery] string app)
+        {
+            string token = _authenticationService.GenerateAccessToken(issuer, app);
+
+            return Ok(token);
+
+        }
+
         /// <summary>
         ///  See src\development\loadbalancer\nginx.conf
         /// </summary>

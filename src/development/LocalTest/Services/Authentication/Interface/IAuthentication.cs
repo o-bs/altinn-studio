@@ -15,5 +15,10 @@ namespace LocalTest.Services.Authentication.Interface
         /// <param name="cookieValidityTime">Token validity time in minutes.</param>
         /// <returns></returns>
         public string GenerateToken(ClaimsPrincipal principal, int cookieValidityTime);
+
+        /// <summary>
+        /// Created a JWT access token based on provided input.
+        ///</summary>
+        public string GenerateAccessToken(string issuer, string app);
     }
 }

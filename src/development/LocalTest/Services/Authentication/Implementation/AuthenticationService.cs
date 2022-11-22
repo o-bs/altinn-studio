@@ -4,6 +4,8 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Security.Cryptography.X509Certificates;
 
+using Altinn.Common.AccessTokenClient.Services;
+
 using LocalTest.Services.Authentication.Interface;
 
 using Microsoft.IdentityModel.Tokens;
@@ -12,6 +14,12 @@ namespace LocalTest.Services.Authentication.Implementation
 {
     public class AuthenticationService : IAuthentication
     {
+        private readonly IAccessTokenGenerator _accessTokenGenerator;
+        public AuthenticationService(IAccessTokenGenerator accessTokenGenerator)
+        {
+            _accessTokenGenerator = accessTokenGenerator;
+        }
+        
         ///<inheritdoc/>
         public string GenerateToken(ClaimsPrincipal principal, int cookieValidityTime)
         {
@@ -34,6 +42,17 @@ namespace LocalTest.Services.Authentication.Implementation
             string serializedToken = tokenHandler.WriteToken(token);
 
             return serializedToken;
+        }
+
+        ///<inheritdoc/>
+        public string GenerateAccessToken(string issuer, string app)
+        {
+            string accessToken = _accessTokenGenerator.GenerateAccessToken(
+                issuer,
+                app,
+                new X509Certificate2("jwtselfsignedcert.pfx", "qwer1234")); // lgtm [cs/hardcoded-credentials]
+
+            return accessToken;
         }
     }
 }

@@ -3,6 +3,7 @@ using System.Security.Cryptography.X509Certificates;
 using System.Text.Json.Serialization;
 
 using Altinn.Authorization.ABAC.Interface;
+using Altinn.Common.AccessTokenClient.Services;
 using Altinn.Common.PEP.Authorization;
 using Altinn.Common.PEP.Clients;
 using Altinn.Common.PEP.Implementation;
@@ -100,6 +101,7 @@ namespace LocalTest
             services.AddTransient<IAuthorizationHandler, AppAccessHandler>();
             services.AddTransient<IAuthorizationHandler, ScopeAccessHandler>();
             services.AddTransient<IPersonLookup, PersonLookupService>();
+            services.AddSingleton<IAccessTokenGenerator, AccessTokenGenerator>();
 
             services.AddSingleton<IContextHandler, ContextHandler>();
             services.AddSingleton<IPolicyRetrievalPoint, PolicyRetrievalPoint>();
