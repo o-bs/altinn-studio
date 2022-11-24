@@ -1,0 +1,15 @@
+.strikeThrough {
+    text-decoration-line: line-through;
+}
+
+.bold {
+    font-weight:bold;
+}
+
+.italic {
+    font-style:italic;
+}
+
+.code{
+    font-family: monospace;
+}

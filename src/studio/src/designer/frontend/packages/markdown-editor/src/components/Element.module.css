@@ -1,0 +1,68 @@
+.block_quote {
+  padding-left: 10px;
+  border-left: 2px solid gray;
+  font-style: italic;
+  margin-bottom: 10px;
+}
+.code_block {
+  font-family: monospace;
+}
+.strikeThrough {
+  text-decoration-line: line-through;
+}
+.italic {
+  font-style: italic;
+}
+.heading_one {
+  font-weight: bold;
+  font-size: 30px;
+}
+.heading_two {
+  font-weight: bold;
+  font-size: 22px;
+}
+.heading_three {
+  font-weight: bold;
+  font-size: 20px;
+}
+.heading_four {
+  font-weight: bold;
+  font-size: 20px;
+}
+.heading_five {
+  font-weight: normal;
+  font-size: 20px;
+}
+.heading_six {
+  font-weight: normal;
+  font-size: 18px;
+}
+.image {
+}
+.code {
+  font-family: monospace;
+}
+.link {
+  color: blue;
+  text-decoration: underline;
+}
+.list_item {
+}
+.ol_list {
+  list-style: upper-latin;
+  padding-left: 20px;
+}
+.paragraph {
+  font-weight: normal;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+.bold {
+  font-weight: bold;
+}
+.thematic_break {
+  border-color: gray;
+}
+.ul_list {
+  padding-left: 20px;
+}

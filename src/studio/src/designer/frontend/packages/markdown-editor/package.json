@@ -1,0 +1,23 @@
+{
+  "name": "@altinn/markdown-editor",
+  "description": "Slate-based Markdown editor",
+  "version": "1.0.0",
+  "dependencies": {
+    "@mui/icons-material": "5.10.9",
+    "remark-parse": "10.0.1",
+    "remark-slate-transformer": "0.7.3",
+    "slate": "0.85.0",
+    "slate-react": "0.83.2",
+    "unified": "10.1.2"
+  },
+  "devDependencies": {
+    "jest": "29.3.1",
+    "slate-history": "^0.85.0"
+  },
+  "main": "src/index.ts",
+  "private": true,
+  "scripts": {
+    "depcheck": "echo Checking $npm_package_name && npx depcheck && echo ",
+    "test": "jest --maxWorkers=50%"
+  }
+}

@@ -72,6 +72,7 @@
     "dashboard",
     "language",
     "mockend",
+    "packages/markdown-editor",
     "packages/schema-editor",
     "packages/schema-model",
     "shared",

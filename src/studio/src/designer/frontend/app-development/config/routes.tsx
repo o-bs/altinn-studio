@@ -6,6 +6,7 @@ import HandleMergeConflictContainerComponent from '../features/handleMergeConfli
 import { IFrame } from '../features/iFrame/iFrameComponent';
 import DataModellingContainer from '../features/dataModelling/containers/DataModellingContainer';
 import { TopBarMenu } from '../layout/AppBar/appBarConfig';
+import {EditReceiptContainer} from "../features/edit-receipt/EditReceiptContainer";
 
 interface IRouteProps {
   headerTextKey?: string;
@@ -127,6 +128,17 @@ const routes: IRoute[] = [
       shadow: true,
     },
   },
+  {
+    path: '/:org/:app/receipt-page',
+    exact: true,
+    activeSubHeaderSelection: TopBarMenu.Create,
+    activeLeftMenuSelection: 'Kvitteringsside',
+    menu: 'create',
+    subapp: EditReceiptContainer,
+    props: {
+      imageSource: 'what is this?',
+    },
+  }
 ];
 
 export default routes;

@@ -20,6 +20,12 @@ const subPathSettings = {
       activeLeftMenuSelection: 'Access-Controll',
       iconClass: 'fa fa-keyhole',
     },
+    {
+      displayText: 'Kvitteringsside',
+      navLink: '/:org/:app/receipt-page',
+      activeLeftMenuSelection: 'Kvitteringsside',
+      iconClass: 'fa fa-write',
+    },
   ],
 };
 export default subPathSettings;

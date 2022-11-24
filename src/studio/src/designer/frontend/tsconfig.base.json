@@ -17,7 +17,8 @@
     "baseUrl": ".",
     "paths": {
       "app-shared/*": ["./shared/*"],
-      "@altinn/schema-editor/*": ["./packages/schema-editor/src/*"]
+      "@altinn/schema-editor/*": ["./packages/schema-editor/src/*"],
+      "@altinn/markdown-editor/*": ["./packages/markdown-editor/src/*"]
     }
   },
   "files": ["declaration.d.ts"],
