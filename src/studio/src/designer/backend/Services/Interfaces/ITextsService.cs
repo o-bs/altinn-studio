@@ -28,7 +28,7 @@ namespace Altinn.Studio.Designer.Services.Interfaces
         /// <param name="repo">Repository</param>
         /// <param name="developer">Username of developer</param>
         /// <param name="languages">List of languages in application</param>
-        /// <returns>The text file as a dictionary with ID and text as key:value pairs</returns>
+        /// <returns>All keys defined across the project language files in an array</returns>
         public Task<List<string>> GetKeys(string org, string repo, string developer, IList<string> languages);
 
         /// <summary>
