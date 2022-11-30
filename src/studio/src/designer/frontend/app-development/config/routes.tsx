@@ -1,5 +1,5 @@
 import { UxEditorApp } from '@altinn/ux-editor/index';
-import { EditReceiptApp } from '@altinn/recipe-editor/index';
+import { EditReceiptApp } from '@altinn/receipt-editor/index';
 import { AccessControlContainer } from '../features/accessControl/containers/AccessControlContainer';
 import { Administration } from '../features/administration/components/Administration';
 import DeployPage from '../features/appPublish/pages/deployPage';
@@ -129,7 +129,7 @@ const routes: IRoute[] = [
     },
   },
   {
-    path: '/:org/:app/recipe-editor',
+    path: '/:org/:app/receipt-editor',
     exact: true,
     activeSubHeaderSelection: TopBarMenu.Create,
     activeLeftMenuSelection: 'UI-Editor',
