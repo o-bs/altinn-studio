@@ -9,7 +9,7 @@
     "jest": "29.3.1"
   },
   "peerDependencies": {
-    "@altinn/altinn-design-system": "0.23.3",
+    "@altinn/altinn-design-system": "0.24.0",
     "@mui/icons-material": "5.10.14",
     "@mui/material": "5.10.14",
     "@mui/styles": "5.10.14",
